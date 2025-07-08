@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #0E243B;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    height: 34vw;
+    background-image: url("assets/images/background stars.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #2194f3;
+    color: white;
+}
+
+.btn-outline {
+    background-color: white;
+    color: black;
+    border: 2px solid #e5e7eb;
+}
+
+.hero-image img {
+    height: 520px;
+}
+.diensten {
+    background-color: #0E243B;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.diensten h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 4rem;
+    margin-bottom: 10rem;
+}
+.diensten h2.visible {
+    opacity: 1;
+}
+
+
+.diensten-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.dienst-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.dienst-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.dienst-card:hover i {
+    animation: spin 0.6s ease-in-out;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.dienst-card i {
+    font-size: 2.5rem;
+    color: #ffaa00;
+    margin-bottom: 1rem;
+}
+
+.dienst-card h3 {
+    transition: color 0.3s ease;
+}
+
+.dienst-card:hover h3 {
+    color: #ffaa00;
+}
+
+
+.dienst-card p {
+    font-size: 0.95rem;
+    color: #c8d6e5;
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    background: #0E243B;
+    padding: 1rem 0;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
+}
+
+.marquee-content {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.marquee-content span {
+    font-size: 2rem;
+    color: #f5a623;
+    margin: 0 2rem;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+model-viewer {
+    background: transparent;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 10px #ffaa00);
+}
+.voordelen {
+    background-color: white;
+    color: #0E243B;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.voordelen h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.voordelen-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.voordeel {
+    color: white;
+    background: #0E243B;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.voordeel.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.voordeel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.voordeel i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffaa00;
+}
+
+.voordeel h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+#draggable {
+    width: 400px;
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-wrapper, .info-wrapper {
+    flex: 1;
+    padding: 30px;
+    min-width: 300px;
+}
+
+.form-wrapper h2, .info-wrapper h2 {
+    color: #001;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ffaa00;
+    color: #001;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+.info-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-wrapper li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+
+
