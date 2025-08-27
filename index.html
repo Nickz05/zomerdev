@@ -1,4 +1,422 @@
 <!DOCTYPE html>
+feature/home-page
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomer Development</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo/logo_volledig.png" alt="Zomer Development logo" />
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Diensten</a></li>
+            <li><a href="#">Over Zomer developments</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="menu-btn">
+            <a class="btn-portfolio" href="https://nickzomer.com">
+                <svg
+                        height="15"
+                        width="15"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                            d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            fill="currentColor"
+                    ></path>
+                </svg>
+                <span>Portfolio</span>
+            </a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#" onclick="closeMenu()">Home</a></li>
+            <li><a href="#" onclick="closeMenu()">Diensten</a></li>
+            <li><a href="#" onclick="closeMenu()">Over Zomer developments</a></li>
+            <li><a href="#" onclick="closeMenu()">Contact</a></li>
+        </ul>
+
+        <a href="https://nickzomer.com" class="mobile-portfolio-btn" onclick="closeMenu()">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+</header>
+
+<main class="hero">
+    <div class="hero-text">
+        <h3>Development Agency</h3>
+        <h1>Website die<br><span>Presteren.</span></h1>
+        <p>Bij Zomer Development bouw ik<br>schaalbare en snelle websites die jou helpen groeien.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Bekijk mijn diensten</a>
+            <a href="#" class="btn btn-outline">Neem contact op</a>
+        </div>
+    </div>
+
+
+
+</main>
+
+<div class="marquee-wrapper">
+    <div class="marquee-track">
+        <div class="marquee-content">
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+        </div>
+        <div class="marquee-content">
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+        </div>
+        <div class="marquee-content">
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+            <span>&lt;/&gt;</span><span>&lt;/&gt;</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="service-cards-section">
+    <h2 class="section-title">
+        <span class="black">Onze</span> <span class="blue">Voordelen</span>
+    </h2>
+
+
+
+    <div class="service-cards-container">
+        <div class="service-card">
+            <div class="tag">Responsive Websites</div>
+            <div class="icon-container">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 4h10v12H7V4zm0 16v-2h10v2H7z"/>
+                </svg>
+            </div>
+            <p class="service-card-text">Perfect werkend op desktop, tablet en mobiel - volledig op maat gemaakt.</p>
+        </div>
+
+        <!-- Card 2: Hosting and Domain -->
+        <div class="service-card">
+            <div class="tag">Hosting and domain</div>
+            <div class="icon-container">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/>
+                </svg>
+            </div>
+            <p class="service-card-text">Geen gedoe. 1 jaar hosting en domein inbegrepen. Daarna verlengoptie.</p>
+        </div>
+
+        <!-- Card 3: Personlijke Support -->
+        <div class="service-card">
+            <div class="tag">Personlijke Support</div>
+            <div class="icon-container">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                </svg>
+            </div>
+            <p class="service-card-text">Direct contact, korte lijntjes en snelle aanpassingen.</p>
+        </div>
+
+        <!-- Card 4: Snelle Laadtijden -->
+        <div class="service-card">
+            <div class="tag">Snelle Laadtijden</div>
+            <div class="icon-container">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M7,2V13H10V22L17,10H13L17,2H7Z"/>
+                </svg>
+            </div>
+            <p class="service-card-text">Geoptimaliseerde code en hosting voor bliksemsnelle prestaties.</p>
+        </div>
+
+        <!-- Card 5: Veilig en Betrouwbaar -->
+        <div class="service-card">
+            <div class="tag">Veilig en Betrouwbaar</div>
+            <div class="icon-container">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+                </svg>
+            </div>
+            <p class="service-card-text">Standaard voorzien van SSL-certificaat, beveiligde formulieren en regelmatige updates</p>
+        </div>
+
+        <!-- Card 6: Volledig op Maat -->
+        <div class="service-card">
+            <div class="tag">Volledig op Maat</div>
+            <div class="icon-container">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M6.192 2.78c-.458-.677-.927-1.248-1.35-1.643a3 3 0 0 0-.71-.515c-.217-.104-.56-.205-.882-.02-.367.213-.427.63-.43.896-.003.304.064.664.173 1.044.196.687.556 1.528 1.035 2.402L.752 8.22c-.277.277-.269.656-.218.918.055.283.187.593.36.903.348.627.92 1.361 1.626 2.068.707.707 1.441 1.278 2.068 1.626.31.173.62.305.903.36.262.05.64.059.918-.218l5.615-5.615c.118.257.092.512.05.939-.03.292-.068.665-.073 1.176v.123h.003a1 1 0 0 0 1.993 0H14v-.057a1 1 0 0 0-.004-.117c-.055-1.25-.7-2.738-1.86-3.494a4 4 0 0 0-.211-.434c-.349-.626-.92-1.36-1.627-2.067S8.857 3.052 8.23 2.704c-.31-.172-.62-.304-.903-.36-.262-.05-.64-.058-.918.219zM4.16 1.867c.381.356.844.922 1.311 1.632l-.704.705c-.382-.727-.66-1.402-.813-1.938a3.3 3.3 0 0 1-.131-.673q.137.09.337.274m.394 3.965c.54.852 1.107 1.567 1.607 2.033a.5.5 0 1 0 .682-.732c-.453-.422-1.017-1.136-1.564-2.027l1.088-1.088q.081.181.183.365c.349.627.92 1.361 1.627 2.068.706.707 1.44 1.278 2.068 1.626q.183.103.365.183l-4.861 4.862-.068-.01c-.137-.027-.342-.104-.608-.252-.524-.292-1.186-.8-1.846-1.46s-1.168-1.32-1.46-1.846c-.147-.265-.225-.47-.251-.607l-.01-.068zm2.87-1.935a2.4 2.4 0 0 1-.241-.561c.135.033.324.11.562.241.524.292 1.186.8 1.846 1.46.45.45.83.901 1.118 1.31a3.5 3.5 0 0 0-1.066.091 11 11 0 0 1-.76-.694c-.66-.66-1.167-1.322-1.458-1.847z"/>
+                </svg>
+            </div>
+            <p class="service-card-text">Geen standaard thema's. Alles wordt uniek voor jou wensen ontwikkeld.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="background">
+<div class="content-wrapper">
+    <section class="profile">
+        <div class="profile__avatar"></div>
+        <h2 class="profile__name">Nick Zomer</h2>
+        <p class="profile__role">Founder & Webdeveloper</p>
+        <div class="profile__actions">
+            <div class="menu-btn">
+                <a class="btn-portfolio" href="https://nickzomer.com">
+                    <svg
+                            height="15"
+                            width="15"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                                d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                                fill="currentColor"
+                        ></path>
+                    </svg>
+                    <span>Portfolio</span>
+                </a>
+            </div>
+            <a href="https://www.linkedin.com/in/zomernick/" aria-label="LinkedIn"><i class="fab fa-linkedin button--linkedin"></i></a>
+
+
+        </div>
+        <div class="profile__skills">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">Javascript</span>
+            <span class="skill-badge">Angular</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">Photoshop</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">Requirement Analyse</span>
+        </div>
+    </section>
+    <section class="about">
+        <h2 class="about__title">Over Zomer Development</h2>
+        <p class="about__text">
+            Mijn naam is Nick Zomer en met Zomer Development help ik ondernemers aan snelle, veilige en professionele websites. Ik bouw alles op maat, zonder templates, en zorg dat jouw website perfect werkt op elk apparaat. Geen ingewikkeld gedoe, gewoon duidelijke communicatie, snelle oplevering en een website die werkt voor jouw bedrijf.
+        </p>
+        <a href="#" class="button button--read-more">Lees Verder</a>
+    </section>
+</div>
+</div>
+<section class="pricing-section">
+    <div class="pricing-header">
+        <h2>Zet de eerste stap - Investeer in je toekomst vandaag</h2>
+    </div>
+
+    <div class="pricing-cards-container">
+        <div class="pricing-card starter">
+            <div class="card-header">
+                <h3>Starter</h3>
+                <p class="price">Vanaf € 499</p>
+            </div>
+            <div class="card-body">
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec aliquam ex, sit amet
+                </p>
+                <button class="btn-pricing">Begin Nu</button>
+                <div class="features">
+                    <h4>Wat is inbegrepen:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Tot 3 Pagina's</li>
+                        <li><i class="fas fa-check-circle"></i> Op maat ontworpen (in jouw huisstijl)</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive (mobiel, tablet, desktop)</li>
+                        <li><i class="fas fa-check-circle"></i> Snelle laadtijden</li>
+                        <li><i class="fas fa-check-circle"></i> Eenvoudige animaties (hover/scroll)</li>
+                        <li><i class="fas fa-check-circle"></i> Inclusief 1 jaar hosting & domein (.nl/.com)</li>
+                        <li><i class="fas fa-check-circle"></i> 1 maanden kleine aanpassingen inbegrepen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-card standard">
+            <div class="card-header">
+                <h3>Standaard</h3>
+                <p class="price">Vanaf € 799</p>
+            </div>
+            <div class="card-body">
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec aliquam ex, sit amet
+                </p>
+                <button class="btn-pricing">Begin Nu</button>
+                <div class="features">
+                    <h4>Wat is inbegrepen:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Tot 8 Pagina's</li>
+                        <li><i class="fas fa-check-circle"></i> Custom Design afgestemd op jouw wensen</li>
+                        <li><i class="fas fa-check-circle"></i> SEO-basis (ingestelde zoektermen, correcte opbouw)</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive en future-proof</li>
+                        <li><i class="fas fa-check-circle"></i> Eenvoudige interacties/animaties</li>
+                        <li><i class="fas fa-check-circle"></i> Inclusief 1 jaar hosting & domein (.nl/.com)</li>
+                        <li><i class="fas fa-check-circle"></i> 3 maanden kleine aanpassingen inbegrepen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-card pro-angular">
+            <div class="card-header">
+                <h3>Pro Angular</h3>
+                <p class="price">Vanaf € 1199</p>
+            </div>
+            <div class="card-body">
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec aliquam ex, sit amet
+                </p>
+                <button class="btn-pricing">Begin Nu</button>
+                <div class="features">
+                    <h4>Wat is inbegrepen:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Opgebouwd in Angular</li>
+                        <li><i class="fas fa-check-circle"></i> Component-based structuur (modern, schaalbaar)</li>
+                        <li><i class="fas fa-check-circle"></i> Snelle laadtijden & future-proof voor uitbreidingen</li>
+                        <li><i class="fas fa-check-circle"></i> Dynamische animaties, moderne UI</li>
+                        <li><i class="fas fa-check-circle"></i> API-ready voor toekomstige koppelingen</li>
+                        <li><i class="fas fa-check-circle"></i> Inclusief 1 jaar hosting & domein (.nl/.com)</li>
+                        <li><i class="fas fa-check-circle"></i> 6 maanden kleine aanpassingen inbegrepen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="section-title">
+        <span class="black">Kom in contact met ons</span>
+        <span class="blue"></span>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="form-wrapper">
+            <form action="https://formspree.io/f/xblyvlko" method="POST">
+                <div class="input-group">
+                    <input type="text" id="full-name" name="full-name" placeholder="Volledige naam*" required>
+                    <input type="text" id="company-name" name="company-name" placeholder="Bedrijfsnaam">
+                </div>
+                <input type="email" id="email-address" name="email-address" placeholder="Email Adres*" required>
+                <textarea id="your-message" name="your-message" rows="4" placeholder="Jouw bericht*" required></textarea>
+
+                <div class="form-bottom">
+                    <input type="hidden" name="_recaptcha" value="on">
+
+                    <div class="recaptcha-placeholder">
+                        <small>Deze site wordt beschermd door reCAPTCHA en de Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> en <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> zijn van toepassing.</small>
+                    </div>
+
+                    <button type="submit">Verstuur Bericht</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-wrapper">
+            <h2>Onze informatie</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Wassenaar, The Netherlands</li>
+                <li><i class="fas fa-envelope"></i> info@zomerdev.com</li>
+                <li><i class="fas fa-building"></i> KVK: 123456789123</li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://tiktok.com/zomerdev"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com/zomerdev"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/zomerdev"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="company-image-container">
+                <img src="assets/images/background_company.png" alt="Zomer Development Office Building">
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo-wrapper">
+                <img src="assets/images/logo/Logo_small_zomerdev-wit-trans.png" alt="Zomer Development Logo" class="footer-logo">
+                <span class="logo-text">Zomer <br> Development</span>
+            </div>
+            <p class="tagline">Websites die presteren. Schaalbaar, snel en veilig, gemaakt met passie vanuit Wassenaar</p>
+            <div class="social-icons-footer">
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Terug naar boven">
+                <i class="fas fa-chevron-up"></i>
+                <span>OMHOOG</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <div class="sitemap">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">Pakketten</a></li>
+                    <li><a href="#">Over Ons</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Algemene voorwaarden</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 Zomer Development, All Rights Reserved</p>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<script src="index.js"></script>
+
+
+ =======
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,5 +430,6 @@
     <h1>Website Under Maintenance</h1>
     <p>We’re currently performing some updates.<br> Please check back soon.</p>
 </div>
+master
 </body>
 </html>
