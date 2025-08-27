@@ -1,3 +1,4 @@
+feature/home-page
 
 body {
     margin: 0;
@@ -1378,3 +1379,33 @@ nav a:hover::after {
         padding: 6px 12px;
     }
 }
+=======
+body {
+    margin: 0;
+    padding: 0;
+    background: #f6f8fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #ff9900;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #333;
+    font-size: 1.2rem;
+}
+ master
