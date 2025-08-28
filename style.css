@@ -149,13 +149,17 @@ nav a:hover::after {
     transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
+.mobile-menu .mobile-portfolio-btn {
+    color: white;
+}
+
 .btn-portfolio {
     padding: 0.8em 1.3em 0.8em 0.9em;
     margin-right: 1rem;
 }
 
-.btn-portfolio svg,
-.mobile-portfolio-btn svg {
+.btn-portfolio svg {
+    fill: white;
     margin: 3px;
     transform: rotate(30deg);
     transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
