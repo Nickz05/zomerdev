@@ -1,3 +1,4 @@
+/* Vervang je huidige body en body::before regels met deze: */
 
 html {
     height: 100%;
@@ -6,22 +7,52 @@ html {
 body {
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
-    color: #FAFFFA;    min-height: 100%;
+    color: #FAFFFA;
+    min-height: 100vh;
     position: relative;
     box-sizing: border-box;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("assets/images/background_company.png");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+/* Desktop versie - behoud het fixed effect */
+@media (min-width: 769px) {
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("assets/images/background_company.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+}
+
+/* Mobiele versie - gebruik absolute positioning */
+@media (max-width: 768px) {
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("assets/images/background_company.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    body {
+        background: url("assets/images/background_company.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+    }
 }
 
 .section-title {
