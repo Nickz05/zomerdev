@@ -1,30 +1,18 @@
-
-body {
+* {
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    color: #FAFFFA;
-    background: url("assets/images/background_company.png") fixed;
-    background-size: cover;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.section-title {
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #FAFFFA;
+    margin: 0;  /* Voeg deze regel toe */
+    padding: 0; /* En deze */
+    background: url("assets/images/background_company.png") fixed;
+    background-size: cover;
 }
 
-.section-title .black {
-    color: #111; /* Zwart */
-}
-
-.section-title .blue {
-    color: #2194f3;
-    font-style: italic;
-    position: relative;
-    display: inline-block;
-}
 
 .navbar {
     display: flex;
@@ -33,10 +21,9 @@ body {
     padding: 1rem 2rem;
     background-color: #FAFFFA;
     position: fixed;
+    top: 0;        /* Voeg deze regel toe */
+    left: 0;       /* En deze */
     z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
@@ -323,6 +310,34 @@ nav a:hover::after {
 }
 
 
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title .black {
+    color: #111; /* zwart */
+}
+
+.section-title .blue {
+    color: #1e90ff; /* blauw */
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title .blue::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #1e90ff;
+    border-radius: 2px;
+}
 
 .service-cards-section {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -569,9 +584,7 @@ nav a:hover::after {
     color: #0E243B;
 }
 
-/* ==========================================================================
-   Pricing Cards Container (Standaard op mobiel)
-   ========================================================================== */
+
 .pricing-cards-container {
     display: flex;
     gap: 30px;
@@ -591,9 +604,7 @@ nav a:hover::after {
     scrollbar-width: none; /* Firefox */
 }
 
-/* ==========================================================================
-   Prijskaartjes (Algemene styling)
-   ========================================================================== */
+
 
 .pricing-card {
     background-color: #fff;
@@ -697,9 +708,7 @@ nav a:hover::after {
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   Specifieke kaartkleuren
-   ========================================================================== */
+
 
 .pricing-card.starter .card-header,
 .pricing-card.pro-angular .card-header {
@@ -709,9 +718,14 @@ nav a:hover::after {
 
 .pricing-card.standard .card-header {
     background-color: #0E243B;
+    color: #B9DFF8;
 }
 
 .pricing-card.standard .card-body {
+    background-color: #001f3f;
+    color: #FAFFFA;
+}
+.pricing-card.standard p {
     background-color: #001f3f;
     color: #FAFFFA;
 }
@@ -745,9 +759,7 @@ nav a:hover::after {
     color: #92d19f;
 }
 
-/* ==========================================================================
-   Carousel Navigatie (Puntjes)
-   ========================================================================== */
+
 .carousel-dots {
     display: flex;
     justify-content: center;
@@ -769,11 +781,8 @@ nav a:hover::after {
     background-color: #2194f3;
 }
 
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
 
-/* Desktop weergave (groter dan 769px) */
+
 @media (min-width: 769px) {
     .pricing-cards-container {
         display: grid;
@@ -793,9 +802,7 @@ nav a:hover::after {
         display: none;
     }
 }
-/* ==========================================================================
-   Contact Sectie
-   ========================================================================== */
+
 
 .contact-section {
     background-color: #FAFFFA;
