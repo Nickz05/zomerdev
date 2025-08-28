@@ -1379,17 +1379,7 @@ nav a:hover::after {
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: #f6f8fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
+
 
 .container {
     background: white;
@@ -1407,4 +1397,4 @@ p {
     color: #333;
     font-size: 1.2rem;
 }
- master
+

@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ==========================================================================
-       Hamburger Menu Functionaliteit
-       ========================================================================== */
+
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -13,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto';
     }
 
-    // Toggle menu bij klik op de hamburger
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -21,14 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
 
-        // Sluit menu bij klik buiten het menu
+
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
                 closeMenu();
             }
         });
 
-        // Sluit menu bij het vergroten van het scherm (desktop)
+
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 closeMenu();
@@ -36,16 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================================================
-       Prijzen Carousel Functionaliteit
-       ========================================================================== */
+
     const cardsContainer = document.querySelector('.pricing-cards-container');
     const cards = document.querySelectorAll('.pricing-card');
     const dots = document.querySelectorAll('.dot');
 
     if (cardsContainer && cards.length > 0 && dots.length > 0) {
 
-        // Functie om de actieve navigatiepunt bij te werken op basis van scrollpositie
         const updateActiveDot = () => {
             let activeIndex = 0;
             const containerScrollLeft = cardsContainer.scrollLeft;
@@ -62,11 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Initialisatie: scroll naar de middelste kaart bij het laden
+
         const centerCardIndex = 1;
         const centerCard = cards[centerCardIndex];
 
-        // Zorg dat de code alleen op mobiel wordt uitgevoerd
         if (window.innerWidth <= 768) {
             if (centerCard) {
                 setTimeout(() => {
@@ -76,14 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Event listener voor het bijwerken van de puntjes
         cardsContainer.addEventListener('scroll', () => {
             // Gebruik een kleine debounce om prestaties te verbeteren
             clearTimeout(cardsContainer.scrollTimeout);
             cardsContainer.scrollTimeout = setTimeout(updateActiveDot, 50);
         });
 
-        // Navigatie via de puntjes
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 const targetCard = cards[index];
@@ -97,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Controleer of de layout verandert bij resizen
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 cardsContainer.scrollLeft = 0; // Reset de scrollpositie op desktop
@@ -116,12 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (event) => {
             event.preventDefault(); // Voorkom dat het formulier direct wordt verzonden
 
-            // Genereer een reCAPTCHA token
             grecaptcha.enterprise.ready(async () => {
                 const token = await grecaptcha.enterprise.execute(SITE_KEY, {action: 'contact_form'});
                 recaptchaTokenInput.value = token;
 
-                // Verstuur het formulier nu de token is toegevoegd
                 contactForm.submit();
             });
         });
