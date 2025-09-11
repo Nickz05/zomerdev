@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neem contact op met Zomer Development voor jouw website project. Gratis gesprek, snelle reactie en persoonlijke service vanuit Wassenaar.">
+    <meta name="keywords" content="contact Zomer Development, website aanvragen, Wassenaar webdeveloper, Nick Zomer contact">
+    <meta name="author" content="Nick Zomer - Zomer Development">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph tags voor social media -->
+    <meta property="og:title" content="Contact Zomer Development - Start jouw project">
+    <meta property="og:description" content="Neem contact op voor jouw professionele website project">
+    <meta property="og:image" content="assets/images/logo/logo_volledig.png">
+    <meta property="og:url" content="https://zomerdev.com/contact">
+    <meta property="og:type" content="website">
+
+    <title>Contact - Zomer Development | Start jouw Website Project</title>
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo/logo-transpirant_zomerdev.png">
+    <link rel="canonical" href="https://zomerdev.com/contact" />
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo/logo_volledig.png" alt="Zomer Development logo" />
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="index.html#services">Diensten</a></li>
+            <li><a href="about.html">Over Zomer Developments</a></li>
+            <li><a href="pricing.html">Prijzen</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-btn">
+        <a class="btn-portfolio" href="https://nickzomer.com">
+            <svg height="15" width="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="" onclick="closeMenu()">Home</a></li>
+            <li><a href="index.html#services" onclick="closeMenu()">Diensten</a></li>
+            <li><a href="about.html" onclick="closeMenu()">Over Zomer developments</a></li>
+            <li><a href="pricing.html" onclick="closeMenu()">Prijzen</a></li>
+            <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+
+        <a href="https://nickzomer.com" class="mobile-portfolio-btn" onclick="closeMenu()">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
+                <path d="M0 0h24v24H0z" fill="white"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+</header>
+<main>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <div class="contact-hero-text">
+                <h1>Laten we <span>Praten</span></h1>
+                <p>Klaar om jouw website project te starten? Ik help je graag verder met een persoonlijk gesprek over jouw wensen en mogelijkheden.</p>
+            </div>
+            <div class="contact-hero-stats">
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24 uur</h3>
+                    <p>Reactietijd</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Gratis</h3>
+                    <p>Kennismaking</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Persoonlijk</h3>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section class="contact-methods">
+        <div class="methods-container">
+            <h2 class="section-title">
+                <span class="black">Kies jouw</span> <span class="blue">Contact Methode</span>
+            </h2>
+
+            <div class="methods-grid">
+                <div class="method-card primary" onclick="scrollToForm()">
+                    <div class="method-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3>Stuur een bericht</h3>
+                    <p>Vertel me over je project via ons contactformulier. Ik reageer binnen 24 uur.</p>
+                    <button class="method-btn">Start nu</button>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Direct emailen</h3>
+                    <p>Voor snelle vragen kun je me direct een email sturen.</p>
+                    <a href="mailto:info@zomerdev.com" class="method-btn outline">info@zomerdev.com</a>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Voor snelle vragen of om een afspraak in te plannen.</p>
+                    <a href="https://wa.me/31612345678" class="method-btn outline" target="_blank">Chat nu</a>
+                </div>
+                <div class="method-card">-->
+                    <!--                    <div class="method-icon">-->
+                    <!--                        <i class="fas fa-calendar"></i>-->
+                    <!--                    </div>-->
+                    <!--                    <h3>Plan een gesprek</h3>-->
+                    <!--                    <p>Boek direct een gratis kennismakingsgesprek van 30 minuten.</p>-->
+                    <!--                    <a href="#" class="method-btn outline">Boek afspraak</a>-->
+                    <!--                </div>
+                    <!--                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="form-section-container">
+            <div class="form-wrapper">
+                <h2>Vertel me over jouw project</h2>
+                <p class="form-intro">Hoe meer details je kunt delen, hoe beter ik je kan helpen met een passende oplossing.</p>
+
+                <form id="contactForm" action="https://formspree.io/f/xblyvlko" method="POST">
+                    <!-- Personal Info -->
+                    <div class="form-section">
+                        <h3>Persoonlijke gegevens</h3>
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <input type="text" id="firstName" name="firstName" placeholder="Voornaam*" required>
+                                <span class="input-error" id="firstName-error"></span>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" id="lastName" name="lastName" placeholder="Achternaam*" required>
+                                <span class="input-error" id="lastName-error"></span>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" placeholder="Email adres*" required>
+                            <span class="input-error" id="email-error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="tel" id="phone" name="phone" placeholder="Telefoonnummer (optioneel)">
+                        </div>
+                    </div>
+
+                    <!-- Business Info -->
+                    <div class="form-section">
+                        <h3>Over jouw bedrijf</h3>
+                        <div class="input-wrapper">
+                            <input type="text" id="company" name="company" placeholder="Bedrijfsnaam*" required>
+                            <span class="input-error" id="company-error"></span>
+                        </div>
+                        <div class="input-wrapper">
+                            <select id="industry" name="industry" required>
+                                <option value="">Selecteer jouw branche*</option>
+                                <option value="retail">Retail/Webshop</option>
+                                <option value="services">Dienstverlening</option>
+                                <option value="restaurant">Restaurant/Horeca</option>
+                                <option value="health">Zorg/Gezondheid</option>
+                                <option value="construction">Bouw/Constructie</option>
+                                <option value="technology">Technologie/IT</option>
+                                <option value="education">Onderwijs</option>
+                                <option value="nonprofit">Non-profit</option>
+                                <option value="other">Anders</option>
+                            </select>
+                            <span class="input-error" id="industry-error"></span>
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="form-section">
+                        <h3>Jouw project</h3>
+
+                        <!-- Pakket Interesse -->
+                        <div class="input-wrapper">
+                            <select id="package" name="package" required>
+                                <option value="">Welk pakket interesseert je?*</option>
+                                <option value="starter">Starter - €499 (Tot 3 pagina's, basis functionaliteit)</option>
+                                <option value="standaard">Standaard - €799 (Tot 8 pagina's, SEO, custom design)</option>
+                                <option value="pro-angular">Pro Angular - €1199 (Modern Angular framework, schaalbaar)</option>
+                                <option value="custom">Iets anders/Custom oplossing</option>
+                                <option value="nog-onduidelijk">Nog onduidelijk, wil graag advies</option>
+                            </select>
+                            <span class="input-error" id="package-error"></span>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">Wat voor website heb je nodig?</label>
+                            <div class="checkbox-options">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="website-type" value="bedrijfswebsite">
+                                    <span class="checkbox-custom"></span>
+                                    Bedrijfswebsite/Portfolio
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="website-type" value="webshop">
+                                    <span class="checkbox-custom"></span>
+                                    Webshop/E-commerce
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="website-type" value="landingspagina">
+                                    <span class="checkbox-custom"></span>
+                                    Landingspagina
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="website-type" value="blog">
+                                    <span class="checkbox-custom"></span>
+                                    Blog/Nieuwssite
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="website-type" value="anders">
+                                    <span class="checkbox-custom"></span>
+                                    Anders
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <select id="budget" name="budget">
+                                <option value="">Wat is jouw totale budget? (optioneel)</option>
+                                <option value="tot-500">Tot €500</option>
+                                <option value="500-750">€500 - €750</option>
+                                <option value="750-1000">€750 - €1.000</option>
+                                <option value="1000-1500">€1.000 - €1.500</option>
+                                <option value="1500+">€1.500+</option>
+                                <option value="flexibel">Flexibel, hangt af van mogelijkheden</option>
+                            </select>
+                            <span class="input-error" id="budget-error"></span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <select id="timeline" name="timeline" required>
+                                <option value="">Wanneer moet het klaar zijn?*</option>
+                                <option value="zo-snel-mogelijk">Zo snel mogelijk</option>
+                                <option value="binnen-maand">Binnen 1 maand</option>
+                                <option value="binnen-2-maanden">Binnen 2 maanden</option>
+                                <option value="binnen-3-maanden">Binnen 3 maanden</option>
+                                <option value="geen-haast">Geen haast</option>
+                            </select>
+                            <span class="input-error" id="timeline-error"></span>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-section">
+                        <h3>Vertel meer over jouw project</h3>
+                        <div class="input-wrapper">
+                            <textarea id="message" name="message" rows="6" placeholder="Beschrijf je project, doelen, wensen en alles wat relevant is. Hoe meer je vertelt, hoe beter ik je kan helpen!" required></textarea>
+                            <span class="input-error" id="message-error"></span>
+                        </div>
+                    </div>
+
+                    <!-- Form Footer -->
+                    <div class="form-footer">
+                        <div class="privacy-notice">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkbox-custom"></span>
+                                Ik ga akkoord met de <a href="#" target="_blank">privacyverklaring</a>*
+                            </label>
+                            <span class="input-error" id="privacy-error"></span>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-outline" onclick="clearForm()">Wissen</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="btn-text">Verstuur bericht</span>
+                                <span class="btn-loading" style="display: none;">
+                                        <i class="fas fa-spinner fa-spin"></i> Versturen...
+                                    </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Bericht verzonden!</h3>
+                        <p>Bedankt voor je bericht. Ik neem binnen 24 uur contact met je op om jouw project te bespreken.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info Sidebar -->
+            <div class="contact-info-sidebar">
+                <div class="info-card">
+                    <h3>Contact informatie</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <span>info@zomerdev.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Locatie</strong>
+                            <span>Wassenaar, Nederland</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <strong>KVK</strong>
+                            <span>98115561</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Volg me</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/zomerdev" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://instagram.com/zomerdev" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://tiktok.com/zomerdev" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-card faq-card">
+                    <h3>Veelgestelde vragen</h3>
+                    <div class="faq-item">
+                        <strong>Hoe snel krijg ik antwoord?</strong>
+                        <p>Binnen 24 uur, meestal veel sneller!</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>Zijn er verborgen kosten?</strong>
+                        <p>Nee, alle kosten worden vooraf transparant gecommuniceerd.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>Kan ik een afspraak inplannen?</strong>
+                        <p>Ja, na je eerste bericht plannen we graag een kennismakingsgesprek in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo-wrapper">
+                <img src="assets/images/logo/Logo_small_zomerdev-wit-trans.png" alt="Zomer Development Logo" class="footer-logo">
+                <span class="logo-text">Zomer <br> Development</span>
+            </div>
+            <p class="tagline">Websites die presteren. Schaalbaar, snel en veilig, gemaakt met passie vanuit Wassenaar</p>
+            <div class="social-icons-footer">
+                <a href="https://tiktok.com/zomerdev" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com/zomerdev" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/zomerdev" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Terug naar boven">
+                <i class="fas fa-chevron-up"></i>
+                <span>OMHOOG</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <div class="sitemap">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="index.html#pricing">Pakketten</a></li>
+                    <li><a href="about.html">Over Ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://nickzomer.com">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Algemene voorwaarden</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 Zomer Development, All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="contact.js"></script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Zomer Development",
+        "description": "Neem contact op met Zomer Development voor jouw website project",
+        "url": "https://www.zomerdev.com/contact",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Zomer Development",
+            "email": "info@zomerdev.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Wassenaar",
+                "@addressCountry": "NL"
+            }
+        }
+    }
+</script>
+</body>
+</html>

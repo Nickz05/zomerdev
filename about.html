@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leer meer over Nick Zomer en Zomer Development. Professionele webdevelopment vanuit Wassenaar, Nederland. Onze missie, visie en werkwijze.">
+    <meta name="keywords" content="Nick Zomer, Zomer Development, over ons, webdeveloper Wassenaar, Nederland, bedrijfsverhaal">
+    <meta name="author" content="Nick Zomer - Zomer Development">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph tags voor social media -->
+    <meta property="og:title" content="Over Zomer Development - Ons Verhaal">
+    <meta property="og:description" content="Ontdek het verhaal achter Zomer Development en founder Nick Zomer">
+    <meta property="og:image" content="assets/images/logo/logo_volledig.png">
+    <meta property="og:url" content="https://zomerdev.com/about">
+    <meta property="og:type" content="website">
+
+    <title>Over Zomer Development - Ons Verhaal | Webdevelopment Wassenaar</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo/logo-transpirant_zomerdev.png">
+    <link rel="canonical" href="https://zomerdev.com/about" />
+    <link rel="stylesheet" href="about.css"/>
+
+
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo/logo_volledig.png" alt="Zomer Development logo" />
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="index.html#services">Diensten</a></li>
+            <li><a href="about.html" class="active">Over Zomer Developments</a></li>
+            <li><a href="pricing.html" >Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-btn">
+        <a class="btn-portfolio" href="https://nickzomer.com">
+            <svg height="15" width="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="" onclick="closeMenu()">Home</a></li>
+            <li><a href="index.html#services" onclick="closeMenu()">Diensten</a></li>
+            <li><a href="about.html" onclick="closeMenu()">Over Zomer developments</a></li>
+            <li><a href="pricing.html" onclick="closeMenu()">Prijzen</a></li>
+            <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+
+        <a href="https://nickzomer.com" class="mobile-portfolio-btn" onclick="closeMenu()">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
+                <path d="M0 0h24v24H0z" fill="white"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <div class="about-hero-text">
+                <h1>Ons <span>Verhaal</span></h1>
+                <p>Van passie voor technologie naar een missie om ondernemers te helpen groeien met krachtige websites. Ontdek het verhaal achter Zomer Development en onze toewijding aan uitmuntendheid.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Start jouw project</a>
+                    <a href="#story" class="btn btn-outline">Lees ons verhaal</a>
+                </div>
+            </div>
+            <div class="about-hero-image">
+                <img src="assets/images/profile_gr.jpg" alt="Nick Zomer - Founder Zomer Development">
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+        <div class="story-container">
+            <aside class="story-sidebar">
+                <nav class="story-nav">
+                    <h3>Navigatie</h3>
+                    <ul>
+                        <li><a href="#beginningen" class="active">Het Begin</a></li>
+                        <li><a href="#missie">Onze Missie</a></li>
+                        <li><a href="#werkwijze">Onze Werkwijze</a></li>
+                        <li><a href="#waarden">Onze Waarden</a></li>
+                        <li><a href="#tijdlijn">Onze Tijdlijn</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="story-content">
+                <div class="story-section-item" id="beginningen">
+                    <h2>Het Begin</h2>
+                    <p>Mijn naam is Nick Zomer, en mijn reis in de wereld van webdevelopment begon al op jonge leeftijd. Wat startte als nieuwsgierigheid naar hoe websites werkten, groeide uit tot een echte passie voor het creëren van digitale ervaringen die er niet alleen goed uitzien, maar ook daadwerkelijk resultaten opleveren.</p>
+
+                    <p>Na jaren ervaring opgedaan te hebben met het werken aan talloze projecten, realiseerde ik me dat veel ondernemers worstelen met websites die niet presteren zoals ze zouden moeten. Te vaak zag ik bedrijven vastzitten met trage, verouderde websites die meer klanten afschrikten dan aantrokken.</p>
+
+                    <blockquote>
+                        "Ik geloofde dat elke ondernemer recht heeft op een website die zijn bedrijf naar een hoger niveau tilt - niet eentje die hem tegenhoudt."
+                    </blockquote>
+
+                    <p>Zo werd Zomer Development geboren. Met de missie om ondernemers te helpen met websites die écht presteren, gevestigd in het mooie Wassenaar.</p>
+                </div>
+
+                <div class="story-section-item" id="missie">
+                    <h2>Onze Missie</h2>
+                    <p>Bij Zomer Development geloven we dat jouw website meer moet zijn dan alleen een digitaal visitekaartje. Het moet een krachtige tool zijn die 24/7 voor je bedrijf werkt, klanten overtuigt en je omzet laat groeien.</p>
+
+                    <h3>Wat ons drijft</h3>
+                    <p>We worden gedreven door het succes van onze klanten. Elke website die we bouwen, elke regel code die we schrijven, wordt gemotiveerd door één simpele vraag: "Hoe kunnen we dit bedrijf helpen om meer succes te behalen online?"</p>
+
+                    <p>We begrijpen dat als kleine ondernemer, je tijd kostbaar is. Daarom zorgen we ervoor dat je website niet alleen mooi is, maar ook zorgt voor concrete resultaten - meer bezoekers, meer leads, meer omzet.</p>
+                </div>
+
+                <div class="story-section-item" id="werkwijze">
+                    <h2>Onze Werkwijze</h2>
+                    <p>Elke samenwerking begint met een grondige analyse van jouw bedrijf, doelen en target audience. We geloven niet in one-size-fits-all oplossingen. Elke website die we maken is volledig op maat ontwikkeld.</p>
+
+                    <h3>Onze aanpak in 5 stappen</h3>
+                    <p><strong>1. Strategie & Planning:</strong> We beginnen met het begrijpen van jouw bedrijf, doelen en wat jouw klanten echt willen zien.</p>
+
+                    <p><strong>2. Design & Concept:</strong> Gebaseerd op onze analyse creëren we een uniek design dat jouw merk perfect weergeeft.</p>
+
+                    <p><strong>3. Development:</strong> Met de nieuwste technologieën bouwen we jouw website, waarbij snelheid en gebruiksvriendelijkheid voorop staan.</p>
+
+                    <p><strong>4. Testing & Optimalisatie:</strong> Voor de livegang testen we alles uitgebreid op verschillende apparaten en browsers.</p>
+
+                    <p><strong>5. Launch & Support:</strong> Na de launch blijven we beschikbaar voor support en doorlopende optimalisaties.</p>
+                </div>
+
+                <div class="story-section-item" id="waarden">
+                    <h2>Mijn Waarden</h2>
+                    <p>Als startende ondernemer en student geloof ik sterk in bepaalde principes die de basis vormen van hoe ik werk en beslissingen neem.</p>
+
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Passie</h4>
+                            <p>Webdevelopment is meer dan werk voor mij - het is mijn passie. Elke lijn code wordt geschreven met toewijding.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>Kwaliteit</h4>
+                            <p>Ook al ben ik net begonnen, ik streven naar uitmuntendheid in alles wat ik doe. Geen compromissen als het gaat om kwaliteit.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Eerlijkheid</h4>
+                            <p>Transparantie over mijn ervaring en vaardigheden. Eerlijke communicatie vormt de basis van vertrouwen.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Leren</h4>
+                            <p>Als student blijf ik constant leren en groeien. Ik breng de nieuwste kennis direct in de praktijk.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Samenwerking</h4>
+                            <p>Ik zie mijn klanten als partners in hun succes. Samen bouwen we iets moois.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Ambitie</h4>
+                            <p>Jong, ambitieus en vol energie om mooie websites te maken die echt verschil maken.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-section-item" id="tijdlijn">
+                    <h2>Onze Tijdlijn</h2>
+                    <p>Van de eerste regel code tot waar we nu staan - dit is onze reis.</p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2017</div>
+                            <div class="timeline-content">
+                                <h4>De eerste stappen</h4>
+                                <p>Mijn eerste website gebouwd. Een simpele HTML pagina, maar het begin van een passie die mijn leven zou veranderen.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020-2022</div>
+                            <div class="timeline-content">
+                                <h4>Leren & Groeien</h4>
+                                <p>Diepgaande studie van moderne webtechnologieën: HTML5, CSS3, JavaScript. Talloze uren besteed aan het perfectioneren van mijn vaardigheden.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h4>Kennis uitbreiden met studie</h4>
+                                <p>De eerste opdrachten voor een opdrachtgever met onder andere de kennis uitgebreidt met Angular en Springboot</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h4>Zomer Development opgericht</h4>
+                                <p>Officiële oprichting van Zomer Development in Wassenaar. Een professionele aanpak met focus op resultaten voor ondernemers.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">Nu</div>
+                            <div class="timeline-content">
+                                <h4>Groei & Expansie</h4>
+                                <p>Uitbreiding van diensten, meer tevreden klanten en een groeiende reputatie als betrouwbare webdevelopment partner.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--    &lt;!&ndash; Stats Section &ndash;&gt;-->
+<!--    <section class="stats-section">-->
+<!--        <div class="stats-container">-->
+<!--            <div class="stat-item">-->
+<!--                <h3>25+</h3>-->
+<!--                <p>Tevreden Klanten</p>-->
+<!--            </div>-->
+<!--            <div class="stat-item">-->
+<!--                <h3>50+</h3>-->
+<!--                <p>Websites Gelanceerd</p>-->
+<!--            </div>-->
+<!--            <div class="stat-item">-->
+<!--                <h3>99%</h3>-->
+<!--                <p>Klanttevredenheid</p>-->
+<!--            </div>-->
+<!--            <div class="stat-item">-->
+<!--                <h3>2s</h3>-->
+<!--                <p>Gemiddelde Laadtijd</p>-->
+<!--            </div>-->
+<!--            <div class="stat-item">-->
+<!--                <h3>24/7</h3>-->
+<!--                <p>Support Beschikbaar</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Klaar om jouw verhaal te schrijven?</h2>
+            <p>Laten we samen werken aan een website die jouw bedrijf naar nieuwe hoogten brengt. Als startende ondernemer begrijp ik jouw uitdagingen en wil ik helpen met websites die écht presteren.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">Start een gesprek</a>
+                <a href="pricing.html" class="btn btn-outline">Bekijk pakketten</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Contact Section (reused from main page) -->
+<section class="contact-section" id="contact">
+    <div class="section-title">
+        <span class="black">Kom in contact met ons</span>
+        <span class="blue"></span>
+    </div>
+
+    <div class="contact-container">
+        <div class="form-wrapper">
+            <form action="https://formspree.io/f/xblyvlko" method="POST">
+                <div class="input-group">
+                    <input type="text" id="full-name" name="full-name" placeholder="Volledige naam*" required>
+                    <input type="text" id="company-name" name="company-name" placeholder="Bedrijfsnaam">
+                </div>
+                <input type="email" id="email-address" name="email-address" placeholder="Email Adres*" required>
+                <textarea id="your-message" name="your-message" rows="4" placeholder="Jouw bericht*" required></textarea>
+
+                <div class="form-bottom">
+                    <input type="hidden" name="_recaptcha" value="on">
+
+                    <div class="recaptcha-placeholder">
+                        <small>Deze site wordt beschermd door reCAPTCHA en de Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> en <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> zijn van toepassing.</small>
+                    </div>
+
+                    <button type="submit">Verstuur Bericht</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-wrapper">
+            <h2>Onze informatie</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Wassenaar, The Netherlands</li>
+                <li><i class="fas fa-envelope"></i> info@zomerdev.com</li>
+                <li><i class="fas fa-building"></i> KVK: .<a href="https://www.kvk.nl/bestellen/#/98115561000063300656/">98115561</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://tiktok.com/zomerdev"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com/zomerdev"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/zomerdev"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="company-image-container">
+                <img src="assets/images/background_company.png" alt="Zomer Development Office Building">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo-wrapper">
+                <img src="assets/images/logo/Logo_small_zomerdev-wit-trans.png" alt="Zomer Development Logo" class="footer-logo">
+                <span class="logo-text">Zomer <br> Development</span>
+            </div>
+            <p class="tagline">Websites die presteren. Schaalbaar, snel en veilig, gemaakt met passie vanuit Wassenaar</p>
+            <div class="social-icons-footer">
+                <a href="https://tiktok.com/zomerdev" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com/zomerdev" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/zomerdev" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Terug naar boven">
+                <i class="fas fa-chevron-up"></i>
+                <span>OMHOOG</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <div class="sitemap">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="index.html#pricing">Pakketten</a></li>
+                    <li><a href="about.html">Over Ons</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://nickzomer.com">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Algemene voorwaarden</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 Zomer Development, All Rights Reserved</p>
+    </div>
+</footer>
+
+
+<script src="about.js"></script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zomer Development",
+        "url": "https://www.zomerdev.com",
+        "logo": "https://www.zomerdev.com/assets/images/logo/logo_volledig.png",
+        "description": "Professionele websites die presteren - Over Zomer Development",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Wassenaar",
+            "addressCountry": "NL"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Nick Zomer"
+        },
+        "sameAs": [
+            "https://linkedin.com/company/zomerdev",
+            "https://instagram.com/zomerdev",
+            "https://tiktok.com/zomerdev"
+        ]
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transparante prijzen voor professionele websites van Zomer Development. Van €1499 tot €3299. Hosting en domein 1 jaar inbegrepen. Geen verborgen kosten.">
+    <meta name="keywords" content="website prijzen, webdevelopment kosten, Zomer Development pakketten, website maken prijs, Wassenaar webdeveloper tarieven">
+    <meta name="author" content="Nick Zomer - Zomer Development">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph tags voor social media -->
+    <meta property="og:title" content="Transparante Website Prijzen - Zomer Development">
+    <meta property="og:description" content="Bekijk onze website pakketten vanaf €1499. Hosting en domein inbegrepen, geen verborgen kosten.">
+    <meta property="og:image" content="assets/images/logo/logo_volledig.png">
+    <meta property="og:url" content="https://zomerdev.com/prijzen">
+    <meta property="og:type" content="website">
+
+    <title>Website Prijzen - Transparante Pakketten | Zomer Development</title>
+
+    <link rel="stylesheet" href="pricing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo/logo-transpirant_zomerdev.png">
+    <link rel="canonical" href="https://zomerdev.com/prijzen" />
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="assets/images/logo/logo_volledig.png" alt="Zomer Development logo" />
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="index.html#services">Diensten</a></li>
+            <li><a href="about.html">Over Zomer Developments</a></li>
+            <li><a href="pricing.html" class="active">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-btn">
+        <a class="btn-portfolio" href="https://nickzomer.com">
+            <svg height="15" width="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="" onclick="closeMenu()">Home</a></li>
+            <li><a href="index.html#services" onclick="closeMenu()">Diensten</a></li>
+            <li><a href="about.html" onclick="closeMenu()">Over Zomer developments</a></li>
+            <li><a href="pricing.html" onclick="closeMenu()">Prijzen</a></li>
+            <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+
+        <a href="https://nickzomer.com" class="mobile-portfolio-btn" onclick="closeMenu()">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
+                <path d="M0 0h24v24H0z" fill="white"></path>
+                <path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path>
+            </svg>
+            <span>Portfolio</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="pricing-hero-content">
+            <h1>Transparante <span>Prijzen</span></h1>
+            <p class="hero-subtitle">Geen verborgen kosten, geen verrassingen. Kies het pakket dat perfect bij jouw bedrijf past.</p>
+
+            <div class="price-promise">
+                <div class="promise-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>1 jaar hosting & domein inbegrepen</span>
+                </div>
+                <div class="promise-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Geen verborgen kosten</span>
+                </div>
+                <div class="promise-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Gratis aanpassingen periode</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Comparison Toggle -->
+    <section class="package-toggle-section">
+        <div class="toggle-container">
+            <div class="package-toggle">
+                <span class="toggle-label">Bekijk pakketten</span>
+                <div class="toggle-switch">
+                    <input type="radio" id="packages-view" name="view-toggle" value="packages" checked>
+                    <input type="radio" id="comparison-view" name="view-toggle" value="comparison">
+                    <label for="packages-view" class="toggle-option">Pakketten</label>
+                    <label for="comparison-view" class="toggle-option">Vergelijken</label>
+                    <div class="toggle-slider"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Pricing Section -->
+    <section class="main-pricing-section" id="packages-section">
+        <div class="pricing-container">
+            <div class="pricing-header">
+                <h2>Kies jouw perfecte website pakket</h2>
+                <p>Van startende ondernemer tot groeiend bedrijf - er is altijd een pakket dat bij je past.</p>
+            </div>
+
+            <div class="pricing-cards-container">
+                <div class="pricing-card starter">
+                    <div class="card-header">
+                        <h3>Starter</h3>
+                        <div class="price-section">
+                            <span class="price">€1499+</span>
+                            <span class="price-period">eenmalig</span>
+                        </div>
+                        <p class="package-description">Ideaal voor kleine bedrijven die een professionele online aanwezigheid willen.</p>
+                    </div>
+
+                    <div class="card-body">
+                        <button class="btn-pricing">Kies Starter</button>
+
+                        <div class="features">
+                            <h4>Wat krijg je:</h4>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Tot 3 pagina's</strong> (Home, Over, Contact)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Op maat ontworpen</strong> in jouw huisstijl</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Volledig responsive</strong> (mobiel, tablet, desktop)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Snelle laadtijden</strong> (&lt;2 seconden)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Basis animaties</strong> (hover/scroll effecten)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Contact formulier</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>SSL certificaat</strong> (beveiligde verbinding)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>1 jaar hosting & .nl/.com domein</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>1 maand gratis aanpassingen</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Basis SEO optimalisatie</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Headless CMS integratie (aanpasbare tekst)</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="pricing-card standard featured">
+                    <div class="card-header">
+                        <h3>Standaard</h3>
+                        <div class="price-section">
+                            <span class="price">€2299+</span>
+                            <span class="price-period">eenmalig</span>
+                        </div>
+                        <p class="package-description">De beste keuze voor groeiende bedrijven die meer functionaliteit nodig hebben.</p>
+                    </div>
+
+                    <div class="card-body">
+                        <button class="btn-pricing">Kies Standaard</button>
+
+                        <div class="features">
+                            <h4>Alles van Starter, plus:</h4>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Tot 8 pagina's</strong> (uitgebreide website)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Custom design proces</strong> afgestemd op jouw wensen</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Geavanceerde SEO</strong> (zoektermen, metadata, opbouw)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Google Analytics</strong> integratie</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Social media integratie</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Nieuwsbrief aanmelding</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Blog functionaliteit</strong> (optioneel)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Geavanceerde animaties</strong> en interacties</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>3 maanden gratis aanpassingen</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Performance monitoring</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Angular Package -->
+                <div class="pricing-card pro-angular">
+                    <div class="card-header">
+                        <h3>Pro Angular</h3>
+                        <div class="price-section">
+                            <span class="price">€3299+</span>
+                            <span class="price-period">eenmalig</span>
+                        </div>
+                        <p class="package-description">Moderne, schaalbare websites gebouwd met de nieuwste technologie voor bedrijven die voorop willen lopen.</p>
+                    </div>
+
+                    <div class="card-body">
+                        <button class="btn-pricing">Kies Pro Angular</button>
+
+                        <div class="features">
+                            <h4>Alles van Standaard, plus:</h4>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Angular framework</strong> (modern & krachtig)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Component-based architectuur</strong> (schaalbaar)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Ultra snelle performance</strong> (SPA voordelen)</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Geavanceerde animaties</strong> & moderne UI</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>API-ready</strong> voor toekomstige koppelingen</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Advanced routing</strong> & navigation</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Future-proof technologie</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>6 maanden gratis aanpassingen</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section" id="comparison-section" style="display: none;">
+        <div class="comparison-container">
+            <h2>Vergelijk alle pakketten</h2>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                    <tr>
+                        <th class="feature-column">Functies</th>
+                        <th class="package-column starter">
+                            <div class="package-header">
+                                <h4>Starter</h4>
+                                <span class="price">€1499</span>
+                            </div>
+                        </th>
+                        <th class="package-column standard">
+                            <div class="package-header">
+                                <h4>Standaard</h4>
+                                <span class="price">€2299</span>
+                                <span class="popular-badge">Populair</span>
+                            </div>
+                        </th>
+                        <th class="package-column pro">
+                            <div class="package-header">
+                                <h4>Pro Angular</h4>
+                                <span class="price">€3299</span>
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="feature-category">
+                        <td colspan="4"><strong>📄 Pagina's & Content</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Aantal pagina's</td>
+                        <td>Tot 3</td>
+                        <td>Tot 8</td>
+                        <td>Onbeperkt</td>
+                    </tr>
+                    <tr>
+                        <td>Custom design</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Responsive design</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Blog functionaliteit</td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr class="feature-category">
+                        <td colspan="4"><strong>🔧 Technologie</strong></td>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS/JavaScript</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Angular Framework</td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>API-ready</td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td>Basis</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr class="feature-category">
+                        <td colspan="4"><strong>📈 SEO & Marketing</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Basis SEO</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Geavanceerde SEO</td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Google Analytics</td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Social media integratie</td>
+                        <td><i class="fas fa-times text-muted"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr class="feature-category">
+                        <td colspan="4"><strong>🛠️ Support & Hosting</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Hosting & domein (1 jaar)</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>SSL certificaat</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Gratis aanpassingen</td>
+                        <td>1 maand</td>
+                        <td>3 maanden</td>
+                        <td>6 maanden</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2>Veelgestelde vragen</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wat is er precies inbegrepen bij hosting en domein?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Je krijgt 1 jaar professionele hosting op snelle servers en een .nl of .com domein naar keuze. Ook inbegrepen: SSL certificaat, dagelijkse backups, 99.9% uptime garantie en technische support.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wat gebeurt er na het eerste jaar?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Na het eerste jaar kun je kiezen om je hosting en domein te verlengen tegen scherpe tarieven (vanaf €8/maand). Je kunt ook kiezen om je website over te dragen naar je eigen hosting.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kan ik later upgraden naar een hoger pakket?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, dat kan altijd! Je betaalt dan alleen het verschil tussen de pakketten. We kunnen je bestaande website uitbreiden met nieuwe functionaliteiten.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wat betekent "gratis aanpassingen periode"?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Na oplevering kun je gedurende de aangegeven periode kleine aanpassingen vragen zoals tekst wijzigingen, foto's vervangen, of kleine design tweaks. Grote wijzigingen vallen hier niet onder.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Krijg ik de broncode van mijn website?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, na volledige betaling krijg je alle bestanden en broncode. Je website is 100% van jou en je kunt er mee doen wat je wilt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Wat als ik niet tevreden ben?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We werken samen tot je 100% tevreden bent. Tijdens het ontwikkelproces krijg je regelmatig updates en kun je feedback geven. Pas bij finale goedkeuring ronden we het project af.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Hoe zit het met betaling?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Je betaalt 50% bij het starten van het project en 50% bij oplevering. Betaling kan via bankoverschrijving of iDEAL. Geen betaling vooraf voor het eerste gesprek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="pricing-cta">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Klaar om te beginnen?</h2>
+                <p>Laten we samen jouw perfecte website bouwen. Start met een gratis kennismakingsgesprek.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start jouw project</a>
+                    <a href="contact.html" class="btn btn-outline">Gratis gesprek</a>
+                </div>
+            </div>
+
+            <div class="cta-guarantee">
+                <div class="guarantee-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <strong>100% Tevredenheidsgarantie</strong>
+                        <span>We werken door tot je tevreden bent</span>
+                    </div>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Op tijd opgeleverd</strong>
+                        <span>Binnen de afgesproken termijn</span>
+                    </div>
+                </div>
+                <div class="guarantee-item">
+                    <i class="fas fa-euro-sign"></i>
+                    <div>
+                        <strong>Geen verborgen kosten</strong>
+                        <span>De prijs die je ziet is wat je betaalt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo-wrapper">
+                <img src="assets/images/logo/Logo_small_zomerdev-wit-trans.png" alt="Zomer Development Logo" class="footer-logo">
+                <span class="logo-text">Zomer <br> Development</span>
+            </div>
+            <p class="tagline">Websites die presteren. Schaalbaar, snel en veilig, gemaakt met passie vanuit Wassenaar</p>
+            <div class="social-icons-footer">
+                <a href="https://tiktok.com/zomerdev" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://instagram.com/zomerdev" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/zomerdev" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Terug naar boven">
+                <i class="fas fa-chevron-up"></i>
+                <span>OMHOOG</span>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <div class="sitemap">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="prijzen.html">Pakketten</a></li>
+                    <li><a href="about.html">Over Ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://nickzomer.com">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Algemene voorwaarden</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 Zomer Development, All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="pricing.js"></script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Website Prijzen - Zomer Development",
+        "description": "Transparante prijzen voor professionele websites. Pakketten vanaf €1499 met hosting en domein inbegrepen.",
+        "url": "https://www.zomerdev.com/prijzen",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Zomer Development",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Starter Website Pakket",
+                    "price": "1499",
+                    "priceCurrency": "EUR",
+                    "description": "Professionele website tot 3 pagina's, hosting en domein inbegrepen"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Standaard Website Pakket",
+                    "price": "2299",
+                    "priceCurrency": "EUR",
+                    "description": "Uitgebreide website tot 8 pagina's met SEO en geavanceerde functionaliteit"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Pro Angular Website Pakket",
+                    "price": "3299",
+                    "priceCurrency": "EUR",
+                    "description": "Modern Angular website met toekomstbestendige technologie"
+                }
+            ]
+        }
+    }
+</script>
+</body>
+</html>
