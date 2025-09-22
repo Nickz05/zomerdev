@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Pre-select package from URL parameter
+    preselectPackageFromURL();
+
     // Form validation and submission
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -57,6 +60,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Pre-select package from URL parameter
+function preselectPackageFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const packageParam = urlParams.get('package');
+
+    if (packageParam) {
+        const packageSelect = document.getElementById('package');
+        if (packageSelect) {
+            // Map URL parameter to select option values
+            const packageMapping = {
+                'starter': 'starter',
+                'standaard': 'standaard',
+                'pro angular': 'pro-angular'
+            };
+
+            const selectValue = packageMapping[packageParam.toLowerCase()];
+            if (selectValue) {
+                packageSelect.value = selectValue;
+
+                // Optional: Scroll to the form after a short delay
+                setTimeout(() => {
+                    const formSection = document.getElementById('contact-form');
+                    if (formSection) {
+                        formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 500);
+            }
+        }
+    }
+}
 
 // Close mobile menu function
 function closeMenu() {
