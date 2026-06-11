@@ -1,0 +1,95 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes pulse-ring { from { opacity: 0; } to { opacity: 0; } }
+  @keyframes fade-up    { from { opacity: 0; } to { opacity: 1; } }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 15px) scale(0.97); }
+}
+
+@keyframes mesh-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(8%, 6%) scale(1.12); }
+}
+@keyframes mesh-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(-6%, -8%) scale(1.08); }
+}
+@keyframes mesh-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(5%, -5%) scale(1.06); }
+  66%       { transform: translate(-4%, 7%) scale(0.94); }
+}
+
+/* Dark mode text overrides — text-white always wins due to higher specificity */
+html.dark .text-navy          { color: var(--text) !important; }
+html.dark .text-navy\/60      { color: rgba(226,232,244,0.60) !important; }
+html.dark .text-navy\/70      { color: rgba(226,232,244,0.70) !important; }
+html.dark .text-\[#152340\]   { color: var(--text) !important; }
+html.dark .text-\[#854F0B\]   { color: var(--gold) !important; }
+html.dark .text-\[#854F0B\]\/70 { color: rgba(251,167,40,0.70) !important; }
+
+/* Dark mode hover text overrides */
+html.dark .hover\:text-navy:hover { color: var(--text) !important; }
+
+/* Dark scrollbar */
+.dark ::-webkit-scrollbar-thumb       { background: #1e3248; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #2a4460; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E6E9F0; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #c8cdd9; }
+
+
+/* Noise texture overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
