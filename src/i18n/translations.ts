@@ -324,6 +324,6 @@ const t = {
       location: 'Wassenaar, Netherlands',
     },
   },
-} as const
+}
 
 export default t
