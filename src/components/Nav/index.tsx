@@ -76,7 +76,7 @@ export default function Nav() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/40 dark:bg-[#0d1b2e]/40 backdrop-blur-[12px] border-b border-black/[0.06] dark:border-white/[0.06]'
+            ? 'bg-[var(--paper)]/80 backdrop-blur-[8px] border-b border-[var(--line-soft)] shadow-sm'
             : 'bg-transparent'
         }`}
       >
