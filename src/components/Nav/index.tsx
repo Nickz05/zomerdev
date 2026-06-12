@@ -56,10 +56,10 @@ export default function Nav() {
       <div ref={sentinelRef} className="absolute top-[100vh] h-px w-full pointer-events-none" />
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? 'bg-[var(--paper)]/80 backdrop-blur-[8px] border-b border-[var(--line-soft)] shadow-sm'
-            : 'bg-transparent'
+            : 'bg-gradient-to-b from-[var(--paper)]/80 to-transparent backdrop-blur-[2px]'
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
