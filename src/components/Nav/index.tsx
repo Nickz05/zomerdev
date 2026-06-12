@@ -56,7 +56,7 @@ export default function Nav() {
       <div ref={sentinelRef} className="absolute top-[100vh] h-px w-full pointer-events-none" />
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-[var(--paper)]/90 backdrop-blur-[8px] transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0d1b2e]/95 backdrop-blur-[8px] transition-all duration-300 ${
           scrolled ? 'border-b border-[var(--line-soft)] shadow-sm' : ''
         }`}
       >
