@@ -48,7 +48,7 @@ export default function Diensten() {
         }}
       >
         {/* Web Development — navy */}
-        <div className="bg-navy px-[clamp(32px,5vw,72px)] py-[clamp(40px,5vw,72px)] flex flex-col justify-between relative overflow-hidden min-h-[400px]">
+        <div data-nav-dark className="bg-navy px-[clamp(32px,5vw,72px)] py-[clamp(40px,5vw,72px)] flex flex-col justify-between relative overflow-hidden min-h-[400px]">
           <span
             aria-hidden
             className="pointer-events-none select-none absolute -bottom-6 -right-4 font-display text-[160px] font-bold leading-none text-white/[0.04]"
