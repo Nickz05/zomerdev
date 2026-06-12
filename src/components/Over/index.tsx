@@ -3,7 +3,7 @@ import { useInView } from '../../hooks/useInView'
 import SectionLabel from '../SectionLabel'
 import BlurImage from '../BlurImage'
 import WordReveal from '../WordReveal'
-import contractPic from '../../../assets/images/nick-menno-overeenkomst.jpg'
+import contractPic from '../../../assets/images/contract-signing.jpg'
 import profilePic from '../../../assets/images/profile-pic.jpg'
 import { useLanguage } from '../../contexts/LanguageContext'
 
