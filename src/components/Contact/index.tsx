@@ -49,6 +49,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      data-nav-dark
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="relative py-[clamp(72px,11vw,120px)] px-6 bg-navy overflow-hidden"
       style={{ scrollMarginTop: '64px' }}

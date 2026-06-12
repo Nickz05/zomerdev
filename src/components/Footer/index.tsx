@@ -12,7 +12,7 @@ export default function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="relative bg-[#080f1c] text-white overflow-hidden">
+    <footer data-nav-dark className="relative bg-[#080f1c] text-white overflow-hidden">
       {/* Top CTA band */}
       <div className="border-b border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-6 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

@@ -5,7 +5,7 @@ export default function Marquee() {
   const repeated = [...t.marquee, ...t.marquee, ...t.marquee]
 
   return (
-    <div className="overflow-hidden bg-navy py-3.5 select-none border-y border-white/5">
+    <div data-nav-dark className="overflow-hidden bg-navy py-3.5 select-none border-y border-white/5">
       <div
         className="flex gap-0 whitespace-nowrap"
         style={{ animation: 'marquee 28s linear infinite' }}

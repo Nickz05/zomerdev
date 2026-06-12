@@ -10,6 +10,7 @@ export default function Nav() {
   const { lang, setLang, t } = useLanguage()
   const { theme, toggleTheme } = useTheme()
   const [scrolled, setScrolled] = useState(false)
+  const [navDark, setNavDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const sentinelRef = useRef<HTMLDivElement>(null)
@@ -33,6 +34,21 @@ export default function Nav() {
   }, [])
 
   useEffect(() => {
+    function checkDark() {
+      const els = document.querySelectorAll('[data-nav-dark]')
+      let dark = false
+      els.forEach(el => {
+        const rect = el.getBoundingClientRect()
+        if (rect.top < 64 && rect.bottom > 0) dark = true
+      })
+      setNavDark(dark)
+    }
+    window.addEventListener('scroll', checkDark, { passive: true })
+    checkDark()
+    return () => window.removeEventListener('scroll', checkDark)
+  }, [])
+
+  useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,42 +67,58 @@ export default function Nav() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
+  // When nav is over a dark section (and not scrolled with white bg): invert colors
+  const light = navDark && !scrolled
+
   return (
     <>
       <div ref={sentinelRef} className="absolute top-[100vh] h-px w-full pointer-events-none" />
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0d1b2e]/95 backdrop-blur-[8px] transition-all duration-300 ${
-          scrolled ? 'border-b border-[var(--line-soft)] shadow-sm' : ''
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? 'bg-white/90 dark:bg-[#0d1b2e]/90 backdrop-blur-[8px] border-b border-[var(--line-soft)] shadow-sm'
+            : 'bg-transparent'
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <img src={logoIcon} alt="" aria-hidden className="w-9 h-9 object-contain flex-shrink-0 dark:hidden" />
+            <img
+              src={light ? logoWhite : logoIcon}
+              alt=""
+              aria-hidden
+              className="w-9 h-9 object-contain flex-shrink-0 dark:hidden transition-opacity duration-200"
+            />
             <img src={logoWhite} alt="" aria-hidden className="w-9 h-9 object-contain flex-shrink-0 hidden dark:block" />
             <div className="flex items-baseline gap-1">
-              <span className="font-bold text-navy text-[15px]">Zomer</span>
-              <span className="font-normal text-[var(--text-muted)] text-[15px]">Development</span>
+              <span className={`font-bold text-[15px] transition-colors duration-200 ${light ? 'text-white' : 'text-navy dark:text-white'}`}>
+                Zomer
+              </span>
+              <span className={`font-normal text-[15px] transition-colors duration-200 ${light ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
+                Development
+              </span>
             </div>
           </a>
 
           <nav className="hidden md:flex items-center gap-0.5">
             {links.map(({ label, href }) => (
-              <NavLink key={href} href={href} active={activeSection === href.replace('#', '')}>{label}</NavLink>
+              <NavLink key={href} href={href} active={activeSection === href.replace('#', '')} light={light}>
+                {label}
+              </NavLink>
             ))}
           </nav>
 
           <div className="hidden md:flex items-center gap-3 ml-4">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-            <LangToggle lang={lang} setLang={setLang} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} light={light} />
+            <LangToggle lang={lang} setLang={setLang} light={light} />
             <Button as="a" href="#contact">{t.nav.cta}</Button>
           </div>
 
           <div className="flex items-center gap-3 md:hidden">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-            <LangToggle lang={lang} setLang={setLang} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} light={light} />
+            <LangToggle lang={lang} setLang={setLang} light={light} />
             <button
-              className="p-2 rounded-[var(--radius-sm)] text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
+              className={`p-2 rounded-[var(--radius-sm)] transition-colors ${light ? 'text-white' : 'text-navy dark:text-white'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy`}
               onClick={() => setMenuOpen(true)}
               aria-label={t.nav.menuOpen}
             >
@@ -140,12 +172,16 @@ export default function Nav() {
   )
 }
 
-function ThemeToggle({ theme, toggleTheme }: { theme: 'light' | 'dark'; toggleTheme: () => void }) {
+function ThemeToggle({ theme, toggleTheme, light }: { theme: 'light' | 'dark'; toggleTheme: () => void; light?: boolean }) {
   return (
     <button
       onClick={toggleTheme}
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="w-8 h-8 rounded-full flex items-center justify-center border border-[var(--line)] bg-[var(--surface-2)] text-[var(--text-muted)] hover:text-[var(--text)] hover:border-[var(--line)] transition-all duration-200"
+      className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-200 ${
+        light
+          ? 'border-white/30 bg-white/10 text-white/70 hover:text-white hover:bg-white/20'
+          : 'border-[var(--line)] bg-[var(--surface-2)] text-[var(--text-muted)] hover:text-[var(--text)]'
+      }`}
     >
       {theme === 'dark'
         ? <IconSun size={14} stroke={1.8} />
@@ -155,24 +191,33 @@ function ThemeToggle({ theme, toggleTheme }: { theme: 'light' | 'dark'; toggleTh
   )
 }
 
-function LangToggle({ lang, setLang }: { lang: 'nl' | 'en'; setLang: (l: 'nl' | 'en') => void }) {
+function LangToggle({ lang, setLang, light }: { lang: 'nl' | 'en'; setLang: (l: 'nl' | 'en') => void; light?: boolean }) {
   return (
-    <div className="relative flex items-center bg-[var(--surface-2)] border border-[var(--line)] rounded-full p-[3px] text-[11px] font-mono font-bold tracking-[0.08em]">
-      {/* Sliding pill */}
+    <div className={`relative flex items-center border rounded-full p-[3px] text-[11px] font-mono font-bold tracking-[0.08em] transition-colors duration-200 ${
+      light ? 'bg-white/10 border-white/20' : 'bg-[var(--surface-2)] border-[var(--line)]'
+    }`}>
       <span
         aria-hidden
-        className="absolute top-[3px] bottom-[3px] w-[calc(50%-3px)] rounded-full bg-navy shadow-sm transition-transform duration-300 cubic-bezier(0.22,1,0.36,1)"
+        className={`absolute top-[3px] bottom-[3px] w-[calc(50%-3px)] rounded-full shadow-sm transition-transform duration-300 ${light ? 'bg-white/30' : 'bg-navy'}`}
         style={{ transform: lang === 'en' ? 'translateX(calc(100% + 2px))' : 'translateX(0)' }}
       />
       <button
         onClick={() => setLang('nl')}
-        className={`relative z-10 px-3 py-1 rounded-full transition-colors duration-300 ${lang === 'nl' ? 'text-white' : 'text-[var(--text-faint)] hover:text-[var(--text)]'}`}
+        className={`relative z-10 px-3 py-1 rounded-full transition-colors duration-300 ${
+          lang === 'nl'
+            ? light ? 'text-white' : 'text-white'
+            : light ? 'text-white/50 hover:text-white' : 'text-[var(--text-faint)] hover:text-[var(--text)]'
+        }`}
       >
         NL
       </button>
       <button
         onClick={() => setLang('en')}
-        className={`relative z-10 px-3 py-1 rounded-full transition-colors duration-300 ${lang === 'en' ? 'text-white' : 'text-[var(--text-faint)] hover:text-[var(--text)]'}`}
+        className={`relative z-10 px-3 py-1 rounded-full transition-colors duration-300 ${
+          lang === 'en'
+            ? light ? 'text-white' : 'text-white'
+            : light ? 'text-white/50 hover:text-white' : 'text-[var(--text-faint)] hover:text-[var(--text)]'
+        }`}
       >
         EN
       </button>
@@ -180,11 +225,13 @@ function LangToggle({ lang, setLang }: { lang: 'nl' | 'en'; setLang: (l: 'nl' | 
   )
 }
 
-function NavLink({ href, children, active }: { href: string; children: React.ReactNode; active?: boolean }) {
+function NavLink({ href, children, active, light }: { href: string; children: React.ReactNode; active?: boolean; light?: boolean }) {
   return (
     <a
       href={href}
-      className="relative px-3 py-2 text-[14px] text-[var(--text-muted)] font-medium hover:text-[var(--text)] transition-colors duration-150 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy rounded-[var(--radius-sm)]"
+      className={`relative px-3 py-2 text-[14px] font-medium transition-colors duration-150 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy rounded-[var(--radius-sm)] ${
+        light ? 'text-white/70 hover:text-white' : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+      }`}
     >
       {children}
       <span className={`absolute bottom-1 left-3 right-3 h-[2px] bg-gold origin-left transition-transform duration-200 ${active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
