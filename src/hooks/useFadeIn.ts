@@ -18,7 +18,8 @@ export function useFadeIn<T extends HTMLElement>(delay = 0) {
       ([entry]) => {
         if (entry.isIntersecting) {
           el.classList.add('in-view')
-          observer.disconnect()
+        } else {
+          el.classList.remove('in-view')
         }
       },
       { threshold: 0.12 }
