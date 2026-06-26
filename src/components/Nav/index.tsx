@@ -67,7 +67,7 @@ export default function Nav() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  const light = navDark
+  const light = navDark && !scrolled
 
   return (
     <>

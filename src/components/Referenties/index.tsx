@@ -47,14 +47,13 @@ export default function Referenties() {
         </div>
 
         <div className="flex flex-col gap-5">
-          {t.referenties.clients.map((c, i) => (
+          {t.referenties.clients.map((c) => (
             <ClientCard
               key={c.index}
               client={c}
               photo={photos[c.index]}
               typeColor={typeColors[c.type] ?? 'text-navy bg-[var(--surface-2)] border-[var(--line)]'}
               clientSinceLabel={t.referenties.clientSince}
-              animProps={anim(100 + i * 120)}
             />
           ))}
         </div>
@@ -95,16 +94,15 @@ function ClientCard({
   photo,
   typeColor,
   clientSinceLabel,
-  animProps,
 }: {
   client: Client
   photo: string
   typeColor: string
   clientSinceLabel: string
-  animProps: { style: React.CSSProperties }
 }) {
   const cardRef = useRef<HTMLDivElement>(null)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
+  const { ref: inViewRef, inView } = useInView()
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = cardRef.current?.getBoundingClientRect()
@@ -116,20 +114,25 @@ function ClientCard({
 
   const handleMouseLeave = () => setTilt({ x: 0, y: 0 })
 
+  const isTilting = tilt.x !== 0 || tilt.y !== 0
+  const translateY = inView ? 0 : 20
+
   return (
     <div
-      ref={cardRef}
-      {...animProps}
+      ref={(el) => {
+        (cardRef as React.MutableRefObject<HTMLDivElement | null>).current = el
+        ;(inViewRef as React.MutableRefObject<HTMLElement | null>).current = el
+      }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className="group grid md:grid-cols-[2fr_3fr] rounded-[var(--radius)] overflow-hidden border border-[var(--line)] hover:border-[var(--navy-600)] hover:shadow-[0_8px_40px_rgba(15,35,56,0.12)] transition-[border-color,box-shadow] duration-300"
       style={{
-        ...animProps.style,
-        transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-        transition: tilt.x === 0 && tilt.y === 0
-          ? 'transform 600ms cubic-bezier(0.22,1,0.36,1), border-color 300ms, box-shadow 300ms'
-          : 'transform 80ms linear, border-color 300ms, box-shadow 300ms',
-        willChange: 'transform',
+        opacity: inView ? 1 : 0,
+        transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) translateY(${translateY}px)`,
+        transition: isTilting
+          ? 'transform 80ms linear, opacity 600ms cubic-bezier(0.22,1,0.36,1), border-color 300ms, box-shadow 300ms'
+          : 'transform 600ms cubic-bezier(0.22,1,0.36,1), opacity 600ms cubic-bezier(0.22,1,0.36,1), border-color 300ms, box-shadow 300ms',
+        willChange: 'transform, opacity',
       }}
     >
       {/* Visual panel */}
@@ -147,10 +150,8 @@ function ClientCard({
         </div>
 
         <div className="absolute bottom-5 left-5">
-          <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 text-white/80 text-[10px] font-mono px-2.5 py-1 rounded-full tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--mint-dot)] flex-shrink-0" />
-            {clientSinceLabel} {c.since}
-          </span>
+          <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/40">{clientSinceLabel}</p>
+          <p className="font-mono text-[12px] tracking-wide text-white/80">{c.since}</p>
         </div>
       </div>
 
