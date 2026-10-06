@@ -28,7 +28,7 @@ const config = {
         text: {
           DEFAULT: '#152340',
           muted: '#5A6B85',
-          faint: '#94A3B8',
+          faint: 'var(--text-faint)',
         },
         mint: {
           bg: '#E1F5EE',

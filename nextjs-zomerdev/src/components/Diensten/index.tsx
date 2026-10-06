@@ -92,7 +92,7 @@ export default function Diensten() {
             <h3 className="font-display text-[clamp(22px,2.8vw,32px)] font-bold text-[#152340] dark:text-[var(--text)] mb-4 leading-tight tracking-[-0.025em]">
               {t.diensten.itTitle}
             </h3>
-            <p className="text-[#854F0B]/70 dark:text-[var(--text-muted)] text-[15px] leading-[1.75] max-w-[340px]">
+            <p className="text-[#854F0B] dark:text-[var(--text-muted)] text-[15px] leading-[1.75] max-w-[340px]">
               {t.diensten.itDesc}
             </p>
           </div>

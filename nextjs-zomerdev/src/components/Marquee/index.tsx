@@ -13,7 +13,7 @@ export default function Marquee() {
         style={{ animation: 'marquee 28s linear infinite' }}
       >
         {repeated.map((item, i) => (
-          <span key={i} className="inline-flex items-center gap-4 text-[11px] font-mono tracking-[0.18em] uppercase text-white/40 px-6">
+          <span key={i} className="inline-flex items-center gap-4 text-[11px] font-mono tracking-[0.18em] uppercase text-white/55 px-6">
             {item}
             <span className="w-1 h-1 rounded-full bg-gold/60 flex-shrink-0" />
           </span>

@@ -164,10 +164,10 @@ export default function Contact() {
           </div>
 
           <div {...anim(230)}>
-            <div className="text-[11px] font-mono text-white/30 tracking-[0.1em] uppercase mb-3">{t.contact.trustLabel}</div>
+            <div className="text-[11px] font-mono text-white/55 tracking-[0.1em] uppercase mb-3">{t.contact.trustLabel}</div>
             <div className="flex flex-col gap-2">
               {["'t Hertenhuisje · Wassenaar", "mdd b.v. · Den Haag"].map((name) => (
-                <div key={name} className="flex items-center gap-2.5 text-white/45 text-[13px]">
+                <div key={name} className="flex items-center gap-2.5 text-white/55 text-[13px]">
                   <span className="w-1 h-1 rounded-full bg-gold flex-shrink-0" />
                   {name}
                 </div>
@@ -185,7 +185,7 @@ export default function Contact() {
               />
               <div>
                 <div className="text-white text-[12px] font-semibold leading-tight">Nick Zomer</div>
-                <div className="text-white/35 text-[10px] font-mono mt-0.5 tracking-wide">{t.contact.founderRole}</div>
+                <div className="text-white/55 text-[10px] font-mono mt-0.5 tracking-wide">{t.contact.founderRole}</div>
               </div>
             </div>
             <div className="flex gap-1.5">
@@ -200,7 +200,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-7 h-7 rounded-[6px] bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-colors"
+                  className="w-7 h-7 rounded-[6px] bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white/55 hover:text-white hover:bg-white/10 transition-colors"
                 >
                   {s.icon}
                 </a>
@@ -336,7 +336,7 @@ function FloatingInput({
       />
       <label
         htmlFor={id}
-        className="absolute left-4 top-[18px] text-[#94A3B8] dark:text-white/30 text-[14px] transition-all duration-150 pointer-events-none peer-focus:top-[9px] peer-focus:text-[10px] peer-focus:tracking-[0.1em] peer-focus:uppercase peer-focus:text-navy dark:peer-focus:text-gold peer-[:not(:placeholder-shown)]:top-[9px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:tracking-[0.1em] peer-[:not(:placeholder-shown)]:uppercase"
+        className="absolute left-4 top-[18px] text-[var(--text-muted)] dark:text-white/55 text-[14px] transition-all duration-150 pointer-events-none peer-focus:top-[9px] peer-focus:text-[10px] peer-focus:tracking-[0.1em] peer-focus:uppercase peer-focus:text-navy dark:peer-focus:text-gold peer-[:not(:placeholder-shown)]:top-[9px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:tracking-[0.1em] peer-[:not(:placeholder-shown)]:uppercase"
       >
         {label}
       </label>

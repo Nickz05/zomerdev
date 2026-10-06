@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="border-b border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-6 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/30 mb-3">{t.footer.ctaLabel}</div>
+            <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 mb-3">{t.footer.ctaLabel}</div>
             <h2 className="font-display text-[clamp(26px,4vw,42px)] font-bold tracking-[-0.03em] leading-tight">
               {t.footer.ctaHeading1}<br />
               <span className="italic text-gold">{t.footer.ctaHeading2}</span>
@@ -47,10 +47,10 @@ export default function Footer() {
             <img src={logoWhite} alt="Zomer Development" className="w-9 h-9 object-contain flex-shrink-0" />
             <div className="flex items-baseline gap-1">
               <span className="font-bold text-white text-[15px]">Zomer</span>
-              <span className="text-white/40 text-[15px]">Development</span>
+              <span className="text-white/55 text-[15px]">Development</span>
             </div>
           </a>
-          <p className="text-white/35 text-[13px] leading-relaxed max-w-[180px]">
+          <p className="text-white/55 text-[13px] leading-relaxed max-w-[180px]">
             {t.footer.tagline}
           </p>
           <div className="flex gap-2">
@@ -61,7 +61,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-8 h-8 rounded-[6px] border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/25 transition-colors"
+                className="w-8 h-8 rounded-[6px] border border-white/10 flex items-center justify-center text-white/55 hover:text-white hover:border-white/25 transition-colors"
               >
                 {s.icon}
               </a>
@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Navigatie */}
         <div className="flex flex-col gap-3">
-          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 mb-1">{t.footer.navLabel}</span>
+          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/55 mb-1">{t.footer.navLabel}</span>
           {t.footer.navLinks.map(({ label, href }) => (
             <a key={href + label} href={a(href)} className="text-white/50 hover:text-white transition-colors text-[13px]">
               {label}
@@ -81,7 +81,7 @@ export default function Footer() {
 
         {/* Diensten */}
         <div className="flex flex-col gap-3">
-          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 mb-1">{t.footer.servicesLabel}</span>
+          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/55 mb-1">{t.footer.servicesLabel}</span>
           {t.footer.serviceLinks.map(({ label, href }) => (
             <a key={label} href={a(href)} className="text-white/50 hover:text-white transition-colors text-[13px]">
               {label}
@@ -91,11 +91,11 @@ export default function Footer() {
 
         {/* Contact */}
         <div className="flex flex-col gap-3">
-          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 mb-1">{t.footer.contactLabel}</span>
+          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/55 mb-1">{t.footer.contactLabel}</span>
           <a href="mailto:info@zomerdev.com" className="text-white/50 hover:text-white transition-colors text-[13px]">
             info@zomerdev.com
           </a>
-          <span className="text-white/35 text-[13px]">{t.footer.location}</span>
+          <span className="text-white/55 text-[13px]">{t.footer.location}</span>
           <a
             href="https://www.linkedin.com/in/zomernick/"
             target="_blank"
@@ -111,7 +111,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-4">
-          <p className="text-white/20 text-[11px] font-mono tracking-wide">
+          <p className="text-white/55 text-[11px] font-mono tracking-wide">
             {t.footer.copyright}
           </p>
           <nav aria-label={t.footer.legalLabel} className="flex flex-wrap items-center gap-x-5 gap-y-2">

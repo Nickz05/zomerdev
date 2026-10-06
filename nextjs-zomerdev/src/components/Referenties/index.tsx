@@ -151,11 +151,11 @@ function ClientCard({
         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-navy/10" />
 
         <div className="absolute top-5 left-5">
-          <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/50">{c.index}</span>
+          <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/85">{c.index}</span>
         </div>
 
         <div className="absolute bottom-5 left-5">
-          <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/40">{clientSinceLabel}</p>
+          <p className="font-mono text-[9px] tracking-[0.18em] uppercase text-white/85">{clientSinceLabel}</p>
           <p className="font-mono text-[12px] tracking-wide text-white/80">{c.since}</p>
         </div>
       </div>

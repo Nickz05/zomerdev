@@ -152,7 +152,7 @@ export default function Hero() {
             {t.hero.discipline1}
           </span>
           <span className="text-[var(--text-muted)] font-light select-none">+</span>
-          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#854F0B]/70">
+          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#854F0B]">
             <span className="w-2 h-2 rounded-full bg-gold shrink-0" />
             {t.hero.discipline2}
           </span>
@@ -204,7 +204,7 @@ export default function Hero() {
           <img src={contractPic} alt="MDD overeenkomst" className="w-full h-44 object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-center px-6">
-            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/45 mb-1.5">{t.hero.photoDateMobile}</span>
+            <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/85 mb-1.5">{t.hero.photoDateMobile}</span>
             <span className="font-display text-[20px] font-bold italic text-white leading-tight">{t.hero.photoCaption}</span>
           </div>
         </div>
@@ -238,20 +238,20 @@ export default function Hero() {
             />
             <div>
               <div className="text-white text-[13px] font-semibold leading-tight">Nick Zomer</div>
-              <div className="text-white/50 text-[11px] font-mono tracking-wide mt-0.5">{t.hero.founder}</div>
+              <div className="text-white/85 text-[11px] font-mono tracking-wide mt-0.5">{t.hero.founder}</div>
             </div>
           </div>
 
           <div className="flex-1" />
 
           <div>
-            <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/40 block mb-3">
+            <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/85 block mb-3">
               {t.hero.photoDate}
             </span>
             <span className="font-display text-[32px] font-bold italic text-white leading-[1.1] tracking-[-0.025em] block">
               {t.hero.photoCaption.split('\n').map((line, i) => <span key={i} className="block">{line}</span>)}
             </span>
-            <p className="text-white/45 text-[13px] leading-relaxed mt-3 max-w-[220px]">
+            <p className="text-white/85 text-[13px] leading-relaxed mt-3 max-w-[220px]">
               {t.hero.photoCaptionSub}
             </p>
           </div>
