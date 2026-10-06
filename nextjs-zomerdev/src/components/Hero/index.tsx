@@ -35,9 +35,10 @@ export default function Hero() {
     },
   })
 
-  const { ref: statsRef, inView: statsInView } = useInView()
-  const count6 = useCounter(6, 1200, statsInView)
-  const count2 = useCounter(2, 900, statsInView)
+  const { ref: statsRef, inView: statsInView, startedHidden } = useInView()
+  const animateStats = statsInView && startedHidden === true
+  const clients = useCounter(2, 900, animateStats)
+  const disciplines = useCounter(2, 900, animateStats)
 
   return (
     <section
@@ -177,12 +178,18 @@ export default function Hero() {
           className="flex items-center gap-6 mt-10 pt-8 border-t border-[var(--line-soft)]"
         >
           <div>
-            <div className="font-display font-bold text-navy text-[22px] leading-none tracking-[-0.03em]">{count6}+</div>
+            <div className="font-display font-bold text-navy text-[22px] leading-none tracking-[-0.03em]">
+              <span aria-hidden>{clients}</span>
+              <span className="sr-only">2</span>
+            </div>
             <div className="text-[10px] text-[var(--text-faint)] uppercase tracking-[0.12em] mt-1 font-medium">{t.hero.stat1Label}</div>
           </div>
           <div className="w-px h-7 bg-[var(--line)]" />
           <div>
-            <div className="font-display font-bold text-navy text-[22px] leading-none tracking-[-0.03em]">{count2}</div>
+            <div className="font-display font-bold text-navy text-[22px] leading-none tracking-[-0.03em]">
+              <span aria-hidden>{disciplines}</span>
+              <span className="sr-only">2</span>
+            </div>
             <div className="text-[10px] text-[var(--text-faint)] uppercase tracking-[0.12em] mt-1 font-medium">{t.hero.stat2Label}</div>
           </div>
           <div className="w-px h-7 bg-[var(--line)]" />
