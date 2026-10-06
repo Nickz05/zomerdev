@@ -58,7 +58,7 @@ const privacyNl: LegalDoc = {
       items: [
         'Cloudflare, Inc. (Verenigde Staten): hosting, CDN, DNS en beveiliging van deze website, en de serverfunctie die je contactformulier ontvangt. Cloudflare verwerkt technische verkeersgegevens zoals je IP-adres.',
         'Resend (Resend, Inc., Verenigde Staten): verstuurt de gegevens die je in het contactformulier invult als e-mail naar mijn mailbox.',
-        '[[E-MAILPROVIDER van info@zomerdev.com — invullen of verwijderen]]: ontvangst en opslag van e-mail.',
+        "Apple (iCloud Mail): ontvangst en opslag van e-mail die naar info@zomerdev.com wordt gestuurd.",
         'WhatsApp (Meta Platforms Ireland Ltd.): alleen als je zelf via de WhatsApp-knop contact opneemt. Voor het berichtenverkeer gelden de voorwaarden en het privacybeleid van WhatsApp; ik zie je telefoonnummer en wat je stuurt.',
         'Met mijn verwerkers heb ik, waar vereist, een verwerkersovereenkomst of gelden de standaardvoorwaarden van de verwerker. Ik verkoop je gegevens nooit en gebruik ze niet voor reclame.',
       ],
@@ -66,7 +66,7 @@ const privacyNl: LegalDoc = {
     {
       heading: 'Doorgifte buiten de EU',
       paragraphs: [
-        'Cloudflare en Resend zijn gevestigd in de Verenigde Staten. Doorgifte gebeurt op basis van passende waarborgen, zoals het EU-U.S. Data Privacy Framework of standaardcontractbepalingen (SCC’s), zoals vastgelegd in de voorwaarden van de betreffende verwerker.',
+        'Cloudflare en Resend zijn gevestigd in de Verenigde Staten en ook Apple kan gegevens buiten de EU verwerken. Doorgifte gebeurt op basis van passende waarborgen, zoals het EU-U.S. Data Privacy Framework of standaardcontractbepalingen (SCC’s), zoals vastgelegd in de voorwaarden van de betreffende verwerker.',
       ],
     },
     {
@@ -140,7 +140,7 @@ const privacyEn: LegalDoc = {
       items: [
         'Cloudflare, Inc. (United States): hosting, CDN, DNS and security of this website, and the server function that receives your contact form. Cloudflare processes technical traffic data such as your IP address.',
         'Resend (Resend, Inc., United States): sends the data you enter in the contact form as an email to my mailbox.',
-        '[[EMAIL PROVIDER for info@zomerdev.com — fill in or remove]]: receiving and storing email.',
+        "Apple (iCloud Mail): receiving and storing email sent to info@zomerdev.com.",
         'WhatsApp (Meta Platforms Ireland Ltd.): only if you contact me through the WhatsApp button. Messaging is governed by WhatsApp’s terms and privacy policy; I see your phone number and what you send.',
         'Where required I have a data processing agreement with my processors, or the processor’s standard terms apply. I never sell your data and do not use it for advertising.',
       ],
@@ -148,7 +148,7 @@ const privacyEn: LegalDoc = {
     {
       heading: 'Transfers outside the EU',
       paragraphs: [
-        'Cloudflare and Resend are based in the United States. Transfers rely on appropriate safeguards, such as the EU-U.S. Data Privacy Framework or standard contractual clauses (SCCs), as set out in the terms of the processor concerned.',
+        'Cloudflare and Resend are based in the United States and Apple may also process data outside the EU. Transfers rely on appropriate safeguards, such as the EU-U.S. Data Privacy Framework or standard contractual clauses (SCCs), as set out in the terms of the processor concerned.',
       ],
     },
     {

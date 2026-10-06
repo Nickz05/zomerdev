@@ -62,7 +62,7 @@ const t = {
           features: [
             'Hulp op afstand bij storingen en vragen',
             'Advies over e-mail, netwerk en beveiliging',
-            'Reactie binnen [[REACTIETIJD BASIS]]',
+            'Reactie binnen 4 uur op werkdagen',
             'Op afroep, geen vaste afname',
           ],
         },
@@ -73,7 +73,7 @@ const t = {
             'Doorlopend beheer van netwerk, e-mail en beveiliging',
             'Microsoft 365 en gebruikersbeheer',
             'Updates en onderhoud op afstand',
-            'Reactie binnen [[REACTIETIJD BEHEER]]',
+            'Reactie binnen 4 uur op werkdagen',
           ],
         },
         opmaat: {
@@ -300,7 +300,7 @@ const t = {
           features: [
             'Remote help with issues and questions',
             'Advice on email, network and security',
-            'Response within [[RESPONSE TIME BASIC]]',
+            'Response within 4 hours on working days',
             'On demand, no fixed commitment',
           ],
         },
@@ -311,7 +311,7 @@ const t = {
             'Continuous management of network, email and security',
             'Microsoft 365 and user management',
             'Updates and maintenance remotely',
-            'Response within [[RESPONSE TIME MANAGEMENT]]',
+            'Response within 4 hours on working days',
           ],
         },
         opmaat: {

@@ -33,7 +33,7 @@ Placeholders (`[[...]]`) staan in `src/config` en `src/i18n`. Ze worden geel gem
 | `npm run dev` | Ontwikkelserver (het formulier werkt hier niet: `/api/contact` bestaat alleen als Pages Function) |
 | `npm run build` | Bouwt de statische site naar `out/` |
 | `npm run preview:cf` | Build + `wrangler pages dev out`: site, `_headers` én `/api/contact` lokaal (vereist `.dev.vars`) |
-| `npm run check:placeholders` | Faalt zolang er nog `[[placeholders]]` in `src/i18n` of `src/config` staan |
+| `npm run check:placeholders` | Faalt zolang er nog `[[placeholders]]` in `src/i18n` of `src/config` staan (`testimonials.ts` telt niet mee: die sectie blijft verborgen zolang er geen echte quotes zijn) |
 
 ## Cloudflare Pages
 
