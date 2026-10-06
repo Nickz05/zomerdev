@@ -1,10 +1,15 @@
+'use client'
+
 import { useRef, useState } from 'react'
 import { useInView } from '../../hooks/useInView'
 import SectionLabel from '../SectionLabel'
 import BlurImage from '../BlurImage'
-import contractPic from '../../../assets/images/nick-menno-overeenkomst.webp'
-import hertenhuisjePic from '../../../assets/images/hertenhuisje.webp'
-import profilePic from '../../../assets/images/profile-pic.webp'
+import contractPicImg from '@/assets/images/nick-menno-overeenkomst.webp'
+const contractPic = contractPicImg.src
+import hertenhuisjePicImg from '@/assets/images/hertenhuisje.webp'
+const hertenhuisjePic = hertenhuisjePicImg.src
+import profilePicImg from '@/assets/images/profile-pic.webp'
+const profilePic = profilePicImg.src
 import { useLanguage } from '../../contexts/LanguageContext'
 
 const typeColors: Record<string, string> = {

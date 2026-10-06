@@ -1,8 +1,12 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import { IconMenu2, IconX, IconSun, IconMoon } from '@tabler/icons-react'
 import Button from '../Button'
-import logoIcon from '../../../assets/images/logo/logo-nav.png'
-import logoWhite from '../../../assets/images/logo/logo-nav-wit.png'
+import logoIconImg from '@/assets/images/logo/logo-nav.png'
+const logoIcon = logoIconImg.src
+import logoWhiteImg from '@/assets/images/logo/logo-nav-wit.png'
+const logoWhite = logoWhiteImg.src
 import { useLanguage } from '../../contexts/LanguageContext'
 import { useTheme } from '../../contexts/ThemeContext'
 

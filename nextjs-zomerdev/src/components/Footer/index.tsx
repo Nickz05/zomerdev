@@ -1,5 +1,8 @@
+'use client'
+
 import { IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconArrowUpRight } from '@tabler/icons-react'
-import logoWhite from '../../../assets/images/logo/logo-nav-wit.png'
+import logoWhiteImg from '@/assets/images/logo/logo-nav-wit.png'
+const logoWhite = logoWhiteImg.src
 import { useLanguage } from '../../contexts/LanguageContext'
 
 const socials = [

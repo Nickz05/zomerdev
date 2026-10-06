@@ -1,8 +1,12 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import Button from '../Button'
 import BlurImage from '../BlurImage'
-import profilePic from '../../../assets/images/profile-pic.webp'
-import contractPic from '../../../assets/images/nick-menno-overeenkomst.webp'
+import profilePicImg from '@/assets/images/profile-pic.webp'
+const profilePic = profilePicImg.src
+import contractPicImg from '@/assets/images/nick-menno-overeenkomst.webp'
+const contractPic = contractPicImg.src
 import { useCounter } from '../../hooks/useCounter'
 import { useInView } from '../../hooks/useInView'
 import { useLanguage } from '../../contexts/LanguageContext'
@@ -183,7 +187,7 @@ export default function Hero() {
           </div>
           <div className="w-px h-7 bg-[var(--line)]" />
           <div>
-            <div className="font-display font-bold text-navy text-[22px] leading-none tracking-[-0.03em]">'25</div>
+            <div className="font-display font-bold text-navy text-[22px] leading-none tracking-[-0.03em]">&apos;25</div>
             <div className="text-[10px] text-[var(--text-faint)] uppercase tracking-[0.12em] mt-1 font-medium">{t.hero.stat3Label}</div>
           </div>
         </div>

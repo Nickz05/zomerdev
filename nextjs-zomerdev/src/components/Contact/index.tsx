@@ -1,8 +1,11 @@
+'use client'
+
 import { useState } from 'react'
 import { IconMail, IconMapPin, IconBuilding, IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconCheck, IconArrowRight } from '@tabler/icons-react'
 import { useInView } from '../../hooks/useInView'
 import SectionLabel from '../SectionLabel'
-import profilePic from '../../../assets/images/profile-pic.webp'
+import profilePicImg from '@/assets/images/profile-pic.webp'
+const profilePic = profilePicImg.src
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function Contact() {
@@ -206,6 +209,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6">
+                  <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
 
                   <div className="mb-1">
                     <div className="font-display text-[22px] font-bold text-gray-900 dark:text-white tracking-[-0.02em]">{t.contact.formTitle}</div>
@@ -247,11 +251,11 @@ export default function Contact() {
                     <label htmlFor="bericht" className="absolute left-4 top-[18px] text-[var(--text-faint)] text-[14px] transition-all duration-150 pointer-events-none peer-focus:top-[9px] peer-focus:text-[10px] peer-focus:tracking-[0.1em] peer-focus:uppercase peer-focus:text-navy dark:peer-focus:text-gold peer-[:not(:placeholder-shown)]:top-[9px] peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:tracking-[0.1em] peer-[:not(:placeholder-shown)]:uppercase">
                       {t.contact.fieldMessage}
                     </label>
-                    {errors.bericht && <p className="text-red-500 text-[11px] mt-1">{errors.bericht}</p>}
+                    {errors.bericht && <p role="alert" className="text-red-500 text-[11px] mt-1">{errors.bericht}</p>}
                   </div>
 
                   {status === 'error' && (
-                    <p className="text-red-500 text-[12px] bg-red-50 border border-red-200 rounded-[var(--radius-sm)] px-4 py-2.5">
+                    <p role="alert" className="text-red-500 text-[12px] bg-red-50 border border-red-200 rounded-[var(--radius-sm)] px-4 py-2.5">
                       {t.contact.errorGeneral}
                     </p>
                   )}
@@ -309,7 +313,7 @@ function FloatingInput({
       >
         {label}
       </label>
-      {error && <p className="text-red-500 text-[11px] mt-1">{error}</p>}
+      {error && <p role="alert" className="text-red-500 text-[11px] mt-1">{error}</p>}
     </div>
   )
 }

@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.zomerdev.com/#business",
+      "name": "Zomer Development",
+      "url": "https://www.zomerdev.com",
+      "email": "info@zomerdev.com",
+      "logo": "https://www.zomerdev.com/favicon.png",
+      "image": "https://www.zomerdev.com/og-image.png",
+      "description": "Freelance web development en IT support voor ondernemers. React, TypeScript, Sanity CMS, Cloudflare. Netwerk, e-mail en beveiliging. Twee disciplines, één aanspreekpunt.",
+      "foundingDate": "2025-09",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wassenaar",
+        "addressRegion": "Zuid-Holland",
+        "addressCountry": "NL"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Netherlands"
+      },
+      "priceRange": "€€",
+      "sameAs": [
+        "https://linkedin.com/company/zomerdev",
+        "https://instagram.com/zomerdev",
+        "https://tiktok.com/@zomerdev"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Diensten",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Development",
+              "description": "Maatwerk websites en web applicaties. React, TypeScript, Sanity CMS, Cloudflare."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT Support & Advies",
+              "description": "Netwerk, e-mail, beveiliging en beheer op afstand voor ondernemers."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zomerdev.com/#nick",
+      "name": "Nick Zomer",
+      "jobTitle": "Freelance Developer & IT Specialist",
+      "url": "https://www.zomerdev.com",
+      "worksFor": {
+        "@id": "https://www.zomerdev.com/#business"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wassenaar",
+        "addressCountry": "NL"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/zomernick/",
+        "https://nickzomer.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.zomerdev.com/#website",
+      "url": "https://www.zomerdev.com",
+      "name": "Zomer Development",
+      "publisher": {
+        "@id": "https://www.zomerdev.com/#business"
+      },
+      "inLanguage": [
+        "nl-NL",
+        "en-GB"
+      ]
+    }
+  ]
+}

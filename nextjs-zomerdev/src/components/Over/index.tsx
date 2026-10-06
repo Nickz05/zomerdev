@@ -1,10 +1,14 @@
+'use client'
+
 import { IconArrowRight, IconBrandLinkedin } from '@tabler/icons-react'
 import { useInView } from '../../hooks/useInView'
 import SectionLabel from '../SectionLabel'
 import BlurImage from '../BlurImage'
 import WordReveal from '../WordReveal'
-import contractPic from '../../../assets/images/contract-signing.webp'
-import profilePic from '../../../assets/images/profile-pic.webp'
+import contractPicImg from '@/assets/images/contract-signing.webp'
+const contractPic = contractPicImg.src
+import profilePicImg from '@/assets/images/profile-pic.webp'
+const profilePic = profilePicImg.src
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function Over() {
