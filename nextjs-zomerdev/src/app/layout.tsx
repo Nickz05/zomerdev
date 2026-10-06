@@ -47,8 +47,9 @@ export const viewport: Viewport = {
   colorScheme: 'light dark',
 }
 
-// Zet de dark-class vóór de eerste paint, zodat er geen flits ontstaat.
-const themeScript = `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}`
+// Zet thema en taal vóór de eerste paint, zodat er geen flits ontstaat. Bij een opgeslagen
+// Engelse taal blijft de body verborgen tot LanguageProvider hydrateert (zie globals.css).
+const themeScript = `try{var d=document.documentElement,t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark');if(localStorage.getItem('lang')==='en'){d.lang='en';d.setAttribute('data-lang-pending','')}}catch(e){}`
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

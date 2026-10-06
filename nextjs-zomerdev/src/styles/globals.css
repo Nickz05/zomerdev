@@ -93,3 +93,13 @@ body::after {
   background-repeat: repeat;
   background-size: 180px 180px;
 }
+
+/* Voorkomt een flits van NL naar EN voor terugkerende Engelstalige bezoekers.
+   Failsafe: na 1,5s wordt de body altijd zichtbaar, ook als JS niet hydrateert. */
+html[data-lang-pending] body {
+  visibility: hidden;
+  animation: lang-reveal 0s 1.5s forwards;
+}
+@keyframes lang-reveal {
+  to { visibility: visible; }
+}
