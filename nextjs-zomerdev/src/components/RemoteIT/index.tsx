@@ -69,19 +69,31 @@ export default function RemoteIT() {
                   </p>
 
                   <p className="mt-6 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                    <span className={`text-[12px] font-mono uppercase tracking-[0.12em] ${featured ? 'text-white/75' : 'text-[var(--text-muted)]'}`}>
-                      {t.remoteIt.from}
-                    </span>
-                    <span
-                      className={`font-display text-[32px] font-bold tracking-[-0.03em] leading-none ${
-                        featured ? 'text-gold' : 'text-navy'
-                      }`}
-                    >
-                      € <MarkedText text={price.amount} />
-                    </span>
-                    <span className={`text-[13px] ${featured ? 'text-white/75' : 'text-[var(--text-muted)]'}`}>
-                      <MarkedText text={price.unit} />
-                    </span>
+                    {price ? (
+                      <>
+                        <span className={`text-[12px] font-mono uppercase tracking-[0.12em] ${featured ? 'text-white/75' : 'text-[var(--text-muted)]'}`}>
+                          {t.remoteIt.from}
+                        </span>
+                        <span
+                          className={`font-display text-[32px] font-bold tracking-[-0.03em] leading-none ${
+                            featured ? 'text-gold' : 'text-navy'
+                          }`}
+                        >
+                          € <MarkedText text={price.amount} />
+                        </span>
+                        <span className={`text-[13px] ${featured ? 'text-white/75' : 'text-[var(--text-muted)]'}`}>
+                          <MarkedText text={price.unit} />
+                        </span>
+                      </>
+                    ) : (
+                      <span
+                        className={`font-display text-[32px] font-bold tracking-[-0.03em] leading-none ${
+                          featured ? 'text-gold' : 'text-navy'
+                        }`}
+                      >
+                        {t.remoteIt.onRequest}
+                      </span>
+                    )}
                   </p>
 
                   <ul className="mt-7 flex flex-col gap-3 flex-1">
