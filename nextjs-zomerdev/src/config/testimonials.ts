@@ -2,7 +2,7 @@
  * Klantquotes voor de sectie "Wat klanten zeggen".
  *
  * De sectie wordt pas getoond als er minstens één quote met echte tekst is. Een quote telt als
- * placeholder zolang `quote.nl` leeg is of nog [[dubbele haken]] bevat. Vul per klant de echte
+ * placeholder zolang `quote.nl` leeg is of nog dubbele rechte haken bevat. Vul per klant de echte
  * woorden in (NL, en optioneel EN) samen met naam, rol en bedrijf, en geef alleen quotes door
  * waarvoor de klant toestemming heeft gegeven.
  *

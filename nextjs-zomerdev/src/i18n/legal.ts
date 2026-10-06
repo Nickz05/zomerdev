@@ -2,7 +2,7 @@ import type { Lang } from './translations'
 
 /**
  * CONCEPTTEKSTEN — laat deze nakijken door een jurist of controleer ze grondig.
- * Velden tussen [[dubbele haken]] moeten door de eigenaar worden ingevuld; ze worden op de
+ * Velden tussen dubbele rechte haken moeten door de eigenaar worden ingevuld; ze worden op de
  * pagina geel gemarkeerd. `npm run check:placeholders` faalt zolang er nog zo'n veld staat.
  */
 
