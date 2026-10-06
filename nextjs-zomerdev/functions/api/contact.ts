@@ -5,7 +5,7 @@
  *
  * Env:
  *   RESEND_API_KEY  (secret, verplicht)
- *   CONTACT_FROM    bijv. "Zomer Development <contact@zomerdev.com>" (domein geverifieerd in Resend)
+ *   CONTACT_FROM    standaard "Zomer Development <mail@zomerdev.com>" (domein geverifieerd in Resend)
  *   CONTACT_TO      ontvanger, standaard info@zomerdev.com
  */
 
@@ -22,7 +22,27 @@ const SUBJECTS: Record<string, string> = {
   anders: 'Anders',
 }
 
-const MAX = { naam: 100, email: 254, bericht: 5000 }
+const MAX = { naam: 100, email: 254, bericht: 5000, body: 12_000 }
+
+// Zachte rate-limit per IP (geheugen van de huidige Worker-isolate). Dit is een extra laag,
+// geen vervanging voor een Cloudflare rate-limiting rule: isolates komen en gaan.
+const WINDOW_MS = 10 * 60 * 1000
+const LIMIT = 5
+const hits = new Map<string, number[]>()
+
+function rateLimited(ip: string): boolean {
+  const now = Date.now()
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS)
+  const limited = recent.length >= LIMIT
+  if (!limited) recent.push(now)
+  hits.set(ip, recent)
+  if (hits.size > 1000) {
+    for (const [key, times] of hits) {
+      if (times.every((t) => now - t >= WINDOW_MS)) hits.delete(key)
+    }
+  }
+  return limited
+}
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const json = (body: Record<string, unknown>, status = 200) =>
@@ -44,9 +64,25 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     return json({ ok: false, error: 'forbidden' }, 403)
   }
 
+  if (!request.headers.get('Content-Type')?.toLowerCase().startsWith('application/json')) {
+    return json({ ok: false, error: 'unsupported_media_type' }, 415)
+  }
+
+  const ip = request.headers.get('CF-Connecting-IP') ?? 'unknown'
+  if (rateLimited(ip)) {
+    return new Response(JSON.stringify({ ok: false, error: 'rate_limited' }), {
+      status: 429,
+      headers: { 'Content-Type': 'application/json', 'Retry-After': String(WINDOW_MS / 1000), 'Cache-Control': 'no-store' },
+    })
+  }
+
   let data: Record<string, unknown>
   try {
-    data = await request.json()
+    const raw = await request.text()
+    if (raw.length > MAX.body) return json({ ok: false, error: 'payload_too_large' }, 413)
+    const parsed: unknown = JSON.parse(raw)
+    if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) throw new Error('not an object')
+    data = parsed as Record<string, unknown>
   } catch {
     return json({ ok: false, error: 'invalid_json' }, 400)
   }
@@ -92,7 +128,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: env.CONTACT_FROM ?? 'Zomer Development <contact@zomerdev.com>',
+        from: env.CONTACT_FROM ?? 'Zomer Development <mail@zomerdev.com>',
         to: [env.CONTACT_TO ?? 'info@zomerdev.com'],
         reply_to: email,
         subject: oneLine(`[Website] ${onderwerp} — ${naam}`),
