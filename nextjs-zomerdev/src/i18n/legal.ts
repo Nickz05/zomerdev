@@ -32,7 +32,7 @@ const privacyNl: LegalDoc = {
     {
       heading: 'Wie is verantwoordelijk?',
       paragraphs: [
-        'Verwerkingsverantwoordelijke is Nick Zomer, handelend onder de naam Zomer Development, [[ADRES]], Wassenaar. KVK-nummer 98115561, btw-nummer [[BTW-NUMMER]].',
+        'Verwerkingsverantwoordelijke is Nick Zomer, handelend onder de naam Zomer Development, gevestigd te Wassenaar. KVK-nummer 98115561.',
         'Vragen over privacy? Mail naar info@zomerdev.com.',
       ],
     },
@@ -66,13 +66,13 @@ const privacyNl: LegalDoc = {
     {
       heading: 'Doorgifte buiten de EU',
       paragraphs: [
-        'Cloudflare en Resend zijn gevestigd in de Verenigde Staten. Doorgifte gebeurt op basis van passende waarborgen, zoals het EU-U.S. Data Privacy Framework of standaardcontractbepalingen. [[CONTROLEER per verwerker welke waarborg geldt]]',
+        'Cloudflare en Resend zijn gevestigd in de Verenigde Staten. Doorgifte gebeurt op basis van passende waarborgen, zoals het EU-U.S. Data Privacy Framework of standaardcontractbepalingen (SCC’s), zoals vastgelegd in de voorwaarden van de betreffende verwerker.',
       ],
     },
     {
       heading: 'Hoe lang bewaar ik gegevens?',
       items: [
-        'Berichten via het contactformulier, e-mail en WhatsApp: [[BEWAARTERMIJN, bijv. maximaal 12 maanden na afhandeling]].',
+        'Berichten via het contactformulier, e-mail en WhatsApp: maximaal 12 maanden na afhandeling van je vraag.',
         'Administratie (facturen, overeenkomsten): 7 jaar, vanwege de fiscale bewaarplicht.',
         'Technische logs bij de hostingpartij: volgens hun standaard bewaartermijn, doorgaans kort.',
       ],
@@ -114,7 +114,7 @@ const privacyEn: LegalDoc = {
     {
       heading: 'Who is responsible?',
       paragraphs: [
-        'The data controller is Nick Zomer, trading as Zomer Development, [[ADDRESS]], Wassenaar, the Netherlands. Chamber of Commerce no. 98115561, VAT no. [[VAT NUMBER]].',
+        'The data controller is Nick Zomer, trading as Zomer Development, based in Wassenaar, the Netherlands. Chamber of Commerce no. 98115561.',
         'Questions about privacy? Email info@zomerdev.com.',
       ],
     },
@@ -148,13 +148,13 @@ const privacyEn: LegalDoc = {
     {
       heading: 'Transfers outside the EU',
       paragraphs: [
-        'Cloudflare and Resend are based in the United States. Transfers rely on appropriate safeguards, such as the EU-U.S. Data Privacy Framework or standard contractual clauses. [[CHECK which safeguard applies per processor]]',
+        'Cloudflare and Resend are based in the United States. Transfers rely on appropriate safeguards, such as the EU-U.S. Data Privacy Framework or standard contractual clauses (SCCs), as set out in the terms of the processor concerned.',
       ],
     },
     {
       heading: 'How long do I keep data?',
       items: [
-        'Messages via the contact form, email and WhatsApp: [[RETENTION PERIOD, e.g. at most 12 months after the matter is closed]].',
+        'Messages via the contact form, email and WhatsApp: at most 12 months after your question has been dealt with.',
         'Records (invoices, agreements): 7 years, due to Dutch tax retention rules.',
         'Technical logs at the hosting provider: according to their standard retention period, usually short.',
       ],
@@ -210,7 +210,7 @@ const termsNl: LegalDoc = {
     {
       heading: '3. Offertes en totstandkoming',
       paragraphs: [
-        'Offertes zijn vrijblijvend en geldig gedurende [[GELDIGHEID OFFERTE, bijv. 30 dagen]], tenzij anders vermeld. Een overeenkomst komt tot stand zodra de opdrachtgever de offerte schriftelijk (ook per e-mail) accepteert of Zomer Development met instemming van de opdrachtgever met de uitvoering begint. Prijzen zijn exclusief btw, tenzij anders vermeld. Vermelde "vanaf"-prijzen zijn indicatief; de definitieve prijs staat in de offerte.',
+        'Offertes zijn vrijblijvend en geldig gedurende 30 dagen, tenzij anders vermeld. Een overeenkomst komt tot stand zodra de opdrachtgever de offerte schriftelijk (ook per e-mail) accepteert of Zomer Development met instemming van de opdrachtgever met de uitvoering begint. Prijzen zijn exclusief btw, tenzij anders vermeld. Vermelde "vanaf"-prijzen zijn indicatief; de definitieve prijs staat in de offerte.',
       ],
     },
     {
@@ -223,16 +223,16 @@ const termsNl: LegalDoc = {
     {
       heading: '5. Remote IT-support en beheer',
       items: [
-        'De inhoud van een pakket (zoals Basis, Beheer of Op maat) en de bijbehorende reactietijden en werktijden staan in de offerte of het pakketoverzicht. Reactietijden zijn streefwaarden: [[REACTIETIJDEN en SERVICEUREN]].',
+        'De inhoud van een pakket (zoals Basis, Beheer of Op maat) en de bijbehorende reactietijden en werktijden staan in de offerte of het pakketoverzicht. Reactietijden zijn streefwaarden en gelden op werkdagen (maandag tot en met vrijdag, exclusief feestdagen), tenzij anders overeengekomen.',
         'Voor werk op afstand geeft de opdrachtgever toegang tot systemen en accounts. Zomer Development gebruikt die toegang alleen voor de opdracht, gaat vertrouwelijk om met inloggegevens en geeft aan wanneer toegang niet meer nodig is.',
         'De opdrachtgever blijft verantwoordelijk voor eigen back-ups, tenzij back-upbeheer uitdrukkelijk onderdeel is van de overeenkomst. Wijzigingen aan systemen worden zo veel mogelijk vooraf afgestemd.',
-        'Abonnementen en beheerovereenkomsten lopen [[DUUR, bijv. per maand]] en kunnen worden opgezegd met een opzegtermijn van [[OPZEGTERMIJN, bijv. 1 maand]].',
+        'Abonnementen en beheerovereenkomsten lopen per maand en kunnen worden opgezegd met een opzegtermijn van 1 maand, tegen het einde van een kalendermaand.',
       ],
     },
     {
       heading: '6. Web development',
       items: [
-        'Na oplevering heeft de opdrachtgever [[ACCEPTATIETERMIJN, bijv. 14 dagen]] om het werk te testen en gebreken te melden. Na die termijn geldt het werk als geaccepteerd. Gemelde gebreken worden binnen redelijke termijn hersteld.',
+        'Na oplevering heeft de opdrachtgever 14 dagen om het werk te testen en gebreken te melden. Na die termijn geldt het werk als geaccepteerd. Gemelde gebreken worden binnen redelijke termijn hersteld.',
         'Wijzigingen buiten de afgesproken scope zijn meerwerk en worden na afstemming tegen het overeengekomen tarief in rekening gebracht.',
         'Hosting, domeinnamen en diensten van derden (zoals Cloudflare of een CMS) zijn onderworpen aan de voorwaarden van die partijen. Zomer Development is niet aansprakelijk voor hun tekortkomingen.',
       ],
@@ -240,7 +240,7 @@ const termsNl: LegalDoc = {
     {
       heading: '7. Tarieven en betaling',
       paragraphs: [
-        'Facturen worden betaald binnen [[BETAALTERMIJN, bijv. 14 dagen]] na factuurdatum, zonder korting of verrekening. Bij te late betaling is de opdrachtgever van rechtswege in verzuim en is de wettelijke handelsrente verschuldigd, plus de redelijke kosten van invordering. Zomer Development mag de dienstverlening opschorten bij niet-tijdige betaling.',
+        'Facturen worden betaald binnen 14 dagen na factuurdatum, zonder korting of verrekening. Bij te late betaling is de opdrachtgever van rechtswege in verzuim en is de wettelijke handelsrente verschuldigd, plus de redelijke kosten van invordering. Zomer Development mag de dienstverlening opschorten bij niet-tijdige betaling.',
         'Tarieven kunnen jaarlijks worden aangepast; bij lopende abonnementen wordt de opdrachtgever daarvan vooraf op de hoogte gesteld.',
       ],
     },
@@ -259,8 +259,8 @@ const termsNl: LegalDoc = {
     {
       heading: '10. Aansprakelijkheid',
       paragraphs: [
-        'Zomer Development is alleen aansprakelijk voor directe schade die het gevolg is van een toerekenbare tekortkoming. De aansprakelijkheid is beperkt tot [[AANSPRAKELIJKHEIDSBEPERKING, bijv. het factuurbedrag over de afgelopen 3 maanden, met een maximum van EUR ...]]. Aansprakelijkheid voor indirecte schade, zoals gederfde winst, gemiste besparingen, bedrijfsstagnatie en gegevensverlies, is uitgesloten. Deze beperkingen gelden niet bij opzet of bewuste roekeloosheid.',
-        'Een claim vervalt als deze niet binnen [[KLACHTTERMIJN, bijv. 3 maanden]] nadat de opdrachtgever de schade ontdekte of redelijkerwijs had kunnen ontdekken, schriftelijk is gemeld.',
+        'Zomer Development is alleen aansprakelijk voor directe schade die het gevolg is van een toerekenbare tekortkoming. De aansprakelijkheid is beperkt tot het factuurbedrag (exclusief btw) van de opdracht waaruit de schade voortvloeit; bij duurovereenkomsten, zoals beheer, tot het bedrag dat in de 3 maanden voorafgaand aan de gebeurtenis is gefactureerd. Aansprakelijkheid voor indirecte schade, zoals gederfde winst, gemiste besparingen, bedrijfsstagnatie en gegevensverlies, is uitgesloten. Deze beperkingen gelden niet bij opzet of bewuste roekeloosheid.',
+        'Een claim vervalt als deze niet binnen 3 maanden nadat de opdrachtgever de schade ontdekte of redelijkerwijs had kunnen ontdekken, schriftelijk is gemeld.',
       ],
     },
     {
@@ -284,7 +284,7 @@ const termsNl: LegalDoc = {
     {
       heading: '14. Toepasselijk recht en geschillen',
       paragraphs: [
-        'Op alle overeenkomsten is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in [[BEVOEGDE RECHTBANK, bijv. Rechtbank Den Haag]], tenzij de wet dwingend anders voorschrijft.',
+        'Op alle overeenkomsten is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in Rechtbank Den Haag, tenzij de wet dwingend anders voorschrijft.',
       ],
     },
   ],
@@ -314,7 +314,7 @@ const termsEn: LegalDoc = {
     {
       heading: '3. Quotes and formation of the agreement',
       paragraphs: [
-        'Quotes are non-binding and valid for [[QUOTE VALIDITY, e.g. 30 days]] unless stated otherwise. An agreement is formed when the client accepts the quote in writing (email included) or when Zomer Development starts work with the client’s consent. Prices exclude VAT unless stated otherwise. "From" prices are indicative; the final price is in the quote.',
+        'Quotes are non-binding and valid for 30 days unless stated otherwise. An agreement is formed when the client accepts the quote in writing (email included) or when Zomer Development starts work with the client’s consent. Prices exclude VAT unless stated otherwise. "From" prices are indicative; the final price is in the quote.',
       ],
     },
     {
@@ -327,16 +327,16 @@ const termsEn: LegalDoc = {
     {
       heading: '5. Remote IT support and management',
       items: [
-        'The content of a package (such as Basic, Management or Custom) and the related response and service hours are set out in the quote or package overview. Response times are targets: [[RESPONSE TIMES and SERVICE HOURS]].',
+        'The content of a package (such as Basic, Management or Custom) and the related response and service hours are set out in the quote or package overview. Response times are targets and apply on working days (Monday to Friday, excluding public holidays) unless agreed otherwise.',
         'For remote work the client grants access to systems and accounts. Zomer Development uses that access only for the assignment, treats credentials confidentially and indicates when access is no longer needed.',
         'The client remains responsible for its own backups unless backup management is expressly part of the agreement. Changes to systems are coordinated in advance wherever possible.',
-        'Subscriptions and management agreements run [[TERM, e.g. monthly]] and can be terminated with a notice period of [[NOTICE PERIOD, e.g. 1 month]].',
+        'Subscriptions and management agreements run monthly and can be terminated with a notice period of 1 month, effective at the end of a calendar month.',
       ],
     },
     {
       heading: '6. Web development',
       items: [
-        'After delivery the client has [[ACCEPTANCE PERIOD, e.g. 14 days]] to test the work and report defects. After that period the work is deemed accepted. Reported defects are fixed within a reasonable time.',
+        'After delivery the client has 14 days to test the work and report defects. After that period the work is deemed accepted. Reported defects are fixed within a reasonable time.',
         'Changes outside the agreed scope are additional work and are charged at the agreed rate after consultation.',
         'Hosting, domain names and third-party services (such as Cloudflare or a CMS) are subject to those parties’ terms. Zomer Development is not liable for their shortcomings.',
       ],
@@ -344,7 +344,7 @@ const termsEn: LegalDoc = {
     {
       heading: '7. Rates and payment',
       paragraphs: [
-        'Invoices are payable within [[PAYMENT TERM, e.g. 14 days]] of the invoice date, without discount or set-off. In case of late payment the client is in default by operation of law and owes statutory commercial interest plus reasonable collection costs. Zomer Development may suspend services in case of late payment.',
+        'Invoices are payable within 14 days of the invoice date, without discount or set-off. In case of late payment the client is in default by operation of law and owes statutory commercial interest plus reasonable collection costs. Zomer Development may suspend services in case of late payment.',
         'Rates may be adjusted annually; for ongoing subscriptions the client will be notified in advance.',
       ],
     },
@@ -363,8 +363,8 @@ const termsEn: LegalDoc = {
     {
       heading: '10. Liability',
       paragraphs: [
-        'Zomer Development is only liable for direct damage resulting from an attributable failure. Liability is limited to [[LIABILITY CAP, e.g. the invoiced amount over the past 3 months, up to a maximum of EUR ...]]. Liability for indirect damage, such as lost profit, missed savings, business interruption and data loss, is excluded. These limitations do not apply in case of intent or deliberate recklessness.',
-        'A claim lapses if it has not been reported in writing within [[CLAIM PERIOD, e.g. 3 months]] after the client discovered, or reasonably could have discovered, the damage.',
+        'Zomer Development is only liable for direct damage resulting from an attributable failure. Liability is limited to the invoiced amount (excluding VAT) for the assignment from which the damage arises; for continuing agreements, such as management, the amount invoiced in the 3 months preceding the event. Liability for indirect damage, such as lost profit, missed savings, business interruption and data loss, is excluded. These limitations do not apply in case of intent or deliberate recklessness.',
+        'A claim lapses if it has not been reported in writing within 3 months after the client discovered, or reasonably could have discovered, the damage.',
       ],
     },
     {
@@ -388,7 +388,7 @@ const termsEn: LegalDoc = {
     {
       heading: '14. Governing law and disputes',
       paragraphs: [
-        'Dutch law applies to all agreements. Disputes are submitted to the competent court in [[COMPETENT COURT, e.g. The Hague District Court]], unless mandatory law provides otherwise.',
+        'Dutch law applies to all agreements. Disputes are submitted to the competent court in The Hague District Court, unless mandatory law provides otherwise.',
       ],
     },
   ],
