@@ -3,7 +3,9 @@
 import { IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconArrowUpRight } from '@tabler/icons-react'
 import logoWhiteImg from '@/assets/images/logo/logo-nav-wit.png'
 const logoWhite = logoWhiteImg.src
+import Link from 'next/link'
 import { useLanguage } from '../../contexts/LanguageContext'
+import { useAnchor } from '../../hooks/useAnchor'
 
 const socials = [
   { href: 'https://www.linkedin.com/in/zomernick/', label: 'LinkedIn', icon: <IconBrandLinkedin size={15} stroke={1.5} /> },
@@ -13,6 +15,7 @@ const socials = [
 
 export default function Footer() {
   const { t } = useLanguage()
+  const a = useAnchor()
 
   return (
     <footer data-nav-dark className="relative bg-[#080f1c] text-white overflow-hidden">
@@ -27,7 +30,7 @@ export default function Footer() {
             </h2>
           </div>
           <a
-            href="#contact"
+            href={a('#contact')}
             className="group flex-shrink-0 inline-flex items-center gap-2.5 bg-gold text-[#0F2338] font-bold text-[14px] px-7 py-4 rounded-[var(--radius-sm)] hover:bg-[#fdd07a] transition-colors"
           >
             {t.footer.ctaButton}
@@ -40,7 +43,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1 flex flex-col gap-5">
-          <a href="#" className="flex items-center gap-2.5">
+          <a href={a('#')} className="flex items-center gap-2.5">
             <img src={logoWhite} alt="Zomer Development" className="w-9 h-9 object-contain flex-shrink-0" />
             <div className="flex items-baseline gap-1">
               <span className="font-bold text-white text-[15px]">Zomer</span>
@@ -70,7 +73,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 mb-1">{t.footer.navLabel}</span>
           {t.footer.navLinks.map(({ label, href }) => (
-            <a key={href + label} href={href} className="text-white/50 hover:text-white transition-colors text-[13px]">
+            <a key={href + label} href={a(href)} className="text-white/50 hover:text-white transition-colors text-[13px]">
               {label}
             </a>
           ))}
@@ -80,7 +83,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/25 mb-1">{t.footer.servicesLabel}</span>
           {t.footer.serviceLinks.map(({ label, href }) => (
-            <a key={label} href={href} className="text-white/50 hover:text-white transition-colors text-[13px]">
+            <a key={label} href={a(href)} className="text-white/50 hover:text-white transition-colors text-[13px]">
               {label}
             </a>
           ))}
@@ -111,9 +114,14 @@ export default function Footer() {
           <p className="text-white/20 text-[11px] font-mono tracking-wide">
             {t.footer.copyright}
           </p>
-          <p className="text-white/15 text-[11px] font-mono">
-            {t.footer.location}
-          </p>
+          <nav aria-label={t.footer.legalLabel} className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link href="/privacy/" className="text-white/60 hover:text-white transition-colors text-[12px]">
+              {t.footer.privacy}
+            </Link>
+            <Link href="/algemene-voorwaarden/" className="text-white/60 hover:text-white transition-colors text-[12px]">
+              {t.footer.terms}
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

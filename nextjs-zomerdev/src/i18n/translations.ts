@@ -136,6 +136,11 @@ const t = {
       successSub: 'Bedankt voor je bericht. Ik neem zo snel mogelijk contact op.',
       errorGeneral: 'Er ging iets mis. Probeer het opnieuw of mail direct naar info@zomerdev.com.',
       founderRole: 'Oprichter',
+      privacyNote: 'Je gegevens gebruik ik alleen om op je bericht te reageren.',
+      privacyLink: 'Lees de privacyverklaring',
+    },
+    legal: {
+      back: 'Terug naar home',
     },
     footer: {
       ctaLabel: 'Klaar om te starten?',
@@ -159,6 +164,9 @@ const t = {
       ],
       linkedinLabel: 'LinkedIn profiel',
       copyright: '© 2026 Zomer Development · KVK 98115561',
+      legalLabel: 'Juridisch',
+      privacy: 'Privacyverklaring',
+      terms: 'Algemene voorwaarden',
       location: 'Wassenaar, Nederland',
     },
   },
@@ -298,6 +306,11 @@ const t = {
       successSub: "Thank you for your message. I'll get back to you as soon as possible.",
       errorGeneral: 'Something went wrong. Please try again or email info@zomerdev.com directly.',
       founderRole: 'Founder',
+      privacyNote: 'I only use your details to respond to your message.',
+      privacyLink: 'Read the privacy statement',
+    },
+    legal: {
+      back: 'Back to home',
     },
     footer: {
       ctaLabel: 'Ready to get started?',
@@ -321,6 +334,9 @@ const t = {
       ],
       linkedinLabel: 'LinkedIn profile',
       copyright: '© 2026 Zomer Development · KVK 98115561',
+      legalLabel: 'Legal',
+      privacy: 'Privacy statement',
+      terms: 'Terms and conditions',
       location: 'Wassenaar, Netherlands',
     },
   },

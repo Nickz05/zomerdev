@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { IconMail, IconMapPin, IconBuilding, IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconCheck, IconArrowRight } from '@tabler/icons-react'
+import Link from 'next/link'
 import { useInView } from '../../hooks/useInView'
 import SectionLabel from '../SectionLabel'
 import profilePicImg from '@/assets/images/profile-pic.webp'
@@ -280,6 +281,14 @@ export default function Contact() {
                       </>
                     )}
                   </button>
+
+                  <p className="text-[12px] leading-relaxed text-[var(--text-muted)] -mt-2">
+                    {t.contact.privacyNote}{' '}
+                    <Link href="/privacy/" className="underline underline-offset-2 hover:text-[var(--text)] transition-colors">
+                      {t.contact.privacyLink}
+                    </Link>
+                    .
+                  </p>
 
                 </form>
               )}

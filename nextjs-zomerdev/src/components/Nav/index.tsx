@@ -9,10 +9,12 @@ import logoWhiteImg from '@/assets/images/logo/logo-nav-wit.png'
 const logoWhite = logoWhiteImg.src
 import { useLanguage } from '../../contexts/LanguageContext'
 import { useTheme } from '../../contexts/ThemeContext'
+import { useAnchor } from '../../hooks/useAnchor'
 
 export default function Nav() {
   const { lang, setLang, t } = useLanguage()
   const { theme, toggleTheme } = useTheme()
+  const a = useAnchor()
   const [scrolled, setScrolled] = useState(false)
   const [navDark, setNavDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -20,10 +22,10 @@ export default function Nav() {
   const sentinelRef = useRef<HTMLDivElement>(null)
 
   const links = [
-    { label: t.nav.diensten, href: '#diensten' },
-    { label: t.nav.over, href: '#over' },
-    { label: t.nav.referenties, href: '#referenties' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.diensten, href: a('#diensten') },
+    { label: t.nav.over, href: a('#over') },
+    { label: t.nav.referenties, href: a('#referenties') },
+    { label: t.nav.contact, href: a('#contact') },
   ]
 
   useEffect(() => {
@@ -85,7 +87,7 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
+          <a href={a('#')} className="flex items-center gap-2">
             <img
               src={light ? logoWhite : logoIcon}
               alt=""
@@ -114,7 +116,7 @@ export default function Nav() {
           <div className="hidden md:flex items-center gap-3 ml-4">
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} light={light} />
             <LangToggle lang={lang} setLang={setLang} light={light} />
-            <Button as="a" href="#contact">{t.nav.cta}</Button>
+            <Button as="a" href={a('#contact')}>{t.nav.cta}</Button>
           </div>
 
           <div className="flex items-center gap-3 md:hidden">
@@ -165,7 +167,7 @@ export default function Nav() {
             </a>
           ))}
           <div className="mt-4">
-            <Button as="a" href="#contact" className="w-full justify-center" onClick={() => setMenuOpen(false)}>
+            <Button as="a" href={a('#contact')} className="w-full justify-center" onClick={() => setMenuOpen(false)}>
               {t.nav.cta}
             </Button>
           </div>
