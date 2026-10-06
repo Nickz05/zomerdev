@@ -6,6 +6,7 @@ import RemoteIT from '@/components/RemoteIT'
 import Werkwijze from '@/components/Werkwijze'
 import Over from '@/components/Over'
 import Referenties from '@/components/Referenties'
+import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ScrollProgress from '@/components/ScrollProgress'
@@ -25,6 +26,7 @@ export default function Home() {
         <Werkwijze />
         <Over />
         <Referenties />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

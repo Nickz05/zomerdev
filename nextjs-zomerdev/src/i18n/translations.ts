@@ -99,6 +99,11 @@ const t = {
         { title: 'Nazorg', text: 'Na oplevering blijf ik bereikbaar voor vragen, onderhoud en doorontwikkeling. Geen tussenpersoon.' },
       ],
     },
+    testimonials: {
+      label: 'KLANTEN',
+      heading1: 'Wat klanten',
+      heading2: 'zeggen.',
+    },
     marquee: [
       'Web Development',
       'IT Support',
@@ -330,6 +335,11 @@ const t = {
         { title: 'Delivery', text: 'I build, set up or manage, with short lines and regular check-ins. You always know where we stand.' },
         { title: 'Aftercare', text: 'After delivery I stay available for questions, maintenance and further development. No middleman.' },
       ],
+    },
+    testimonials: {
+      label: 'CLIENTS',
+      heading1: 'What clients',
+      heading2: 'say.',
     },
     marquee: [
       'Web Development',
