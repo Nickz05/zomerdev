@@ -5,6 +5,7 @@ const t = {
     nav: {
       diensten: 'Diensten',
       remoteIt: 'Remote IT',
+      werkwijze: 'Werkwijze',
       over: 'Over',
       referenties: 'Referenties',
       contact: 'Contact',
@@ -85,6 +86,18 @@ const t = {
           ],
         },
       },
+    },
+    werkwijze: {
+      label: 'WERKWIJZE',
+      heading1: 'Zo werk ik,',
+      heading2: 'in vier stappen.',
+      stepLabel: 'Stap',
+      steps: [
+        { title: 'Kennismaking', text: 'We bespreken je situatie, wensen en doelen in een vrijblijvend gesprek. Zo weet ik wat je nodig hebt.' },
+        { title: 'Voorstel', text: 'Je ontvangt een helder voorstel met aanpak, planning en prijs. Pas als jij akkoord bent, begin ik.' },
+        { title: 'Uitvoering', text: 'Ik bouw, richt in of beheer, met korte lijnen en regelmatige afstemming. Je weet altijd waar we staan.' },
+        { title: 'Nazorg', text: 'Na oplevering blijf ik bereikbaar voor vragen, onderhoud en doorontwikkeling. Geen tussenpersoon.' },
+      ],
     },
     marquee: [
       'Web Development',
@@ -200,6 +213,7 @@ const t = {
       navLinks: [
         { label: 'Diensten', href: '#diensten' },
         { label: 'Remote IT', href: '#remote-it' },
+        { label: 'Werkwijze', href: '#werkwijze' },
         { label: 'Over', href: '#over' },
         { label: 'Referenties', href: '#referenties' },
         { label: 'Contact', href: '#contact' },
@@ -223,6 +237,7 @@ const t = {
     nav: {
       diensten: 'Services',
       remoteIt: 'Remote IT',
+      werkwijze: 'How I work',
       over: 'About',
       referenties: 'Clients',
       contact: 'Contact',
@@ -303,6 +318,18 @@ const t = {
           ],
         },
       },
+    },
+    werkwijze: {
+      label: 'HOW I WORK',
+      heading1: 'How I work,',
+      heading2: 'in four steps.',
+      stepLabel: 'Step',
+      steps: [
+        { title: 'Introduction', text: 'We discuss your situation, wishes and goals in a no-obligation conversation, so I know what you need.' },
+        { title: 'Proposal', text: 'You receive a clear proposal with approach, planning and price. I only start once you agree.' },
+        { title: 'Delivery', text: 'I build, set up or manage, with short lines and regular check-ins. You always know where we stand.' },
+        { title: 'Aftercare', text: 'After delivery I stay available for questions, maintenance and further development. No middleman.' },
+      ],
     },
     marquee: [
       'Web Development',
@@ -418,6 +445,7 @@ const t = {
       navLinks: [
         { label: 'Services', href: '#diensten' },
         { label: 'Remote IT', href: '#remote-it' },
+        { label: 'How I work', href: '#werkwijze' },
         { label: 'About', href: '#over' },
         { label: 'Clients', href: '#referenties' },
         { label: 'Contact', href: '#contact' },
