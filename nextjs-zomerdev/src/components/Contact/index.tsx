@@ -171,7 +171,7 @@ export default function Contact() {
             </div>
             <div className="flex gap-1.5">
               {[
-                { href: 'https://linkedin.com/company/zomerdev', label: 'LinkedIn', icon: <IconBrandLinkedin size={14} stroke={1.5} /> },
+                { href: 'https://www.linkedin.com/in/zomernick/', label: 'LinkedIn', icon: <IconBrandLinkedin size={14} stroke={1.5} /> },
                 { href: 'https://instagram.com/zomerdev', label: 'Instagram', icon: <IconBrandInstagram size={14} stroke={1.5} /> },
                 { href: 'https://tiktok.com/@zomerdev', label: 'TikTok', icon: <IconBrandTiktok size={14} stroke={1.5} /> },
               ].map((s) => (
