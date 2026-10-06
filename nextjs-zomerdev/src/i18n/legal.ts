@@ -223,7 +223,7 @@ const termsNl: LegalDoc = {
     {
       heading: '5. Remote IT-support en beheer',
       items: [
-        'De inhoud van een pakket (zoals Basis, Beheer of Op maat) en de bijbehorende reactietijden en werktijden staan in de offerte of het pakketoverzicht. Reactietijden zijn streefwaarden en gelden op werkdagen (maandag tot en met vrijdag, exclusief feestdagen), tenzij anders overeengekomen.',
+        'De inhoud van een pakket (zoals Basis of Op maat) en de bijbehorende reactietijden en werktijden staan in de offerte of het pakketoverzicht. Reactietijden zijn streefwaarden en gelden op werkdagen (maandag tot en met vrijdag, exclusief feestdagen), tenzij anders overeengekomen.',
         'Voor werk op afstand geeft de opdrachtgever toegang tot systemen en accounts. Zomer Development gebruikt die toegang alleen voor de opdracht, gaat vertrouwelijk om met inloggegevens en geeft aan wanneer toegang niet meer nodig is.',
         'De opdrachtgever blijft verantwoordelijk voor eigen back-ups, tenzij back-upbeheer uitdrukkelijk onderdeel is van de overeenkomst. Wijzigingen aan systemen worden zo veel mogelijk vooraf afgestemd.',
         'Abonnementen en beheerovereenkomsten lopen per maand en kunnen worden opgezegd met een opzegtermijn van 1 maand, tegen het einde van een kalendermaand.',
@@ -327,7 +327,7 @@ const termsEn: LegalDoc = {
     {
       heading: '5. Remote IT support and management',
       items: [
-        'The content of a package (such as Basic, Management or Custom) and the related response and service hours are set out in the quote or package overview. Response times are targets and apply on working days (Monday to Friday, excluding public holidays) unless agreed otherwise.',
+        'The content of a package (such as Basic or Custom) and the related response and service hours are set out in the quote or package overview. Response times are targets and apply on working days (Monday to Friday, excluding public holidays) unless agreed otherwise.',
         'For remote work the client grants access to systems and accounts. Zomer Development uses that access only for the assignment, treats credentials confidentially and indicates when access is no longer needed.',
         'The client remains responsible for its own backups unless backup management is expressly part of the agreement. Changes to systems are coordinated in advance wherever possible.',
         'Subscriptions and management agreements run monthly and can be terminated with a notice period of 1 month, effective at the end of a calendar month.',

@@ -8,7 +8,7 @@ import { PACKAGE_PRICES, type PackageId } from '../../config/pricing'
 import SectionLabel from '../SectionLabel'
 import MarkedText from '../MarkedText'
 
-const ORDER: PackageId[] = ['basis', 'beheer', 'opmaat']
+const ORDER: PackageId[] = ['basis', 'opmaat']
 
 export default function RemoteIT() {
   const { t } = useLanguage()
@@ -43,11 +43,11 @@ export default function RemoteIT() {
           <p className="mt-5 text-[16px] leading-[1.75] text-[var(--text-muted)]">{t.remoteIt.sub}</p>
         </div>
 
-        <ul className="grid gap-5 md:grid-cols-3 items-stretch">
+        <ul className="grid gap-5 md:grid-cols-2 max-w-4xl items-stretch">
           {ORDER.map((id, i) => {
             const pkg = t.remoteIt.packages[id]
             const price = PACKAGE_PRICES[id]
-            const featured = id === 'beheer'
+            const featured = id === 'basis'
             return (
               <li key={id} style={anim(100 + i * 90)} className="flex">
                 <article

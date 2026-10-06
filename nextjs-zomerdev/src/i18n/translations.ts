@@ -66,16 +66,6 @@ const t = {
             'Op afroep, geen vaste afname',
           ],
         },
-        beheer: {
-          name: 'Beheer',
-          tagline: 'Structureel beheer, zodat jij kunt ondernemen.',
-          features: [
-            'Doorlopend beheer van netwerk, e-mail en beveiliging',
-            'Microsoft 365 en gebruikersbeheer',
-            'Updates en onderhoud op afstand',
-            'Reactie binnen 4 uur op werkdagen',
-          ],
-        },
         opmaat: {
           name: 'Op maat',
           tagline: 'Een project of combinatie die past bij jouw bedrijf.',
@@ -302,16 +292,6 @@ const t = {
             'Advice on email, network and security',
             'Response within 4 hours on working days',
             'On demand, no fixed commitment',
-          ],
-        },
-        beheer: {
-          name: 'Management',
-          tagline: 'Ongoing management, so you can focus on your business.',
-          features: [
-            'Continuous management of network, email and security',
-            'Microsoft 365 and user management',
-            'Updates and maintenance remotely',
-            'Response within 4 hours on working days',
           ],
         },
         opmaat: {
