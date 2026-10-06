@@ -10,6 +10,7 @@ export default function SectionDots() {
   const sections = [
     { id: 'hero', label: 'Home' },
     { id: 'diensten', label: t.nav.diensten },
+    { id: 'remote-it', label: t.nav.remoteIt },
     { id: 'over', label: t.nav.over },
     { id: 'referenties', label: t.nav.referenties },
     { id: 'contact', label: t.nav.contact },

@@ -23,8 +23,8 @@ export default function Nav() {
 
   const links = [
     { label: t.nav.diensten, href: a('#diensten') },
+    { label: t.nav.remoteIt, href: a('#remote-it') },
     { label: t.nav.over, href: a('#over') },
-    { label: t.nav.referenties, href: a('#referenties') },
     { label: t.nav.contact, href: a('#contact') },
   ]
 

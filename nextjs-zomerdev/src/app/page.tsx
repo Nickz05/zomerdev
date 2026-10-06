@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Diensten from '@/components/Diensten'
 import Marquee from '@/components/Marquee'
+import RemoteIT from '@/components/RemoteIT'
 import Over from '@/components/Over'
 import Referenties from '@/components/Referenties'
 import Contact from '@/components/Contact'
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Diensten />
         <Marquee />
+        <RemoteIT />
         <Over />
         <Referenties />
         <Contact />

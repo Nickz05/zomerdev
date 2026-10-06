@@ -4,6 +4,7 @@ const t = {
   nl: {
     nav: {
       diensten: 'Diensten',
+      remoteIt: 'Remote IT',
       over: 'Over',
       referenties: 'Referenties',
       contact: 'Contact',
@@ -43,6 +44,48 @@ const t = {
       itDesc: 'Praktische IT ondersteuning voor ondernemers. Van netwerk en email tot structureel beheer en technisch advies.',
       itTags: ['Netwerk & email', 'Beheer op afstand', 'Technisch advies'],
     },
+    remoteIt: {
+      label: 'REMOTE IT SUPPORT',
+      heading1: 'IT-hulp op afstand,',
+      heading2: 'zonder gedoe.',
+      sub: 'Storing, vraag of structureel beheer: ik los het op afstand op. Kies een pakket als startpunt, altijd afgestemd op jou.',
+      from: 'vanaf',
+      cta: 'Vraag aan',
+      note: 'Alle prijzen zijn exclusief btw. Een offerte op maat volgt na een kennismaking. Zie ook de',
+      termsLink: 'algemene voorwaarden',
+      packages: {
+        basis: {
+          name: 'Basis',
+          tagline: 'Hulp wanneer je die nodig hebt.',
+          features: [
+            'Hulp op afstand bij storingen en vragen',
+            'Advies over e-mail, netwerk en beveiliging',
+            'Reactie binnen [[REACTIETIJD BASIS]]',
+            'Op afroep, geen vaste afname',
+          ],
+        },
+        beheer: {
+          name: 'Beheer',
+          tagline: 'Structureel beheer, zodat jij kunt ondernemen.',
+          features: [
+            'Doorlopend beheer van netwerk, e-mail en beveiliging',
+            'Microsoft 365 en gebruikersbeheer',
+            'Updates en onderhoud op afstand',
+            'Reactie binnen [[REACTIETIJD BEHEER]]',
+          ],
+        },
+        opmaat: {
+          name: 'Op maat',
+          tagline: 'Een project of combinatie die past bij jouw bedrijf.',
+          features: [
+            'Afgestemd op jouw systemen en wensen',
+            'Inrichting of migratie, bijvoorbeeld Microsoft 365 of VPN',
+            'Te combineren met web development',
+            'Vrijblijvende offerte na kennismaking',
+          ],
+        },
+      },
+    },
     marquee: [
       'Web Development',
       'IT Support',
@@ -58,7 +101,7 @@ const t = {
       heading1: 'Developer.',
       heading2: 'En IT-specialist.',
       bio1: 'Ik ben Nick Zomer, developer en IT-specialist uit Wassenaar. Ik startte Zomer Development in september 2025 met één doel: ondernemers helpen die technologie serieus nemen, zonder dat ze bij meerdere mensen hoeven aan te kloppen.',
-      bio2: 'Of het nu gaat om een website bouwen, een netwerk inrichten of e-mail en beveiliging regelen — ik pak het allemaal op. Geen templates, geen standaard pakketten. Alles op maat, met korte lijnen en directe communicatie.',
+      bio2: 'Of het nu gaat om een website bouwen, een netwerk inrichten of e-mail en beveiliging regelen — ik pak het allemaal op. Geen templates. Pakketten als startpunt, altijd afgestemd op jou. Korte lijnen en directe communicatie.',
       skillsLabel: 'Waar ik mee werk',
       skillWeb: 'Web Development',
       skillIt: 'IT & Infrastructuur',
@@ -156,6 +199,7 @@ const t = {
       contactLabel: 'Contact',
       navLinks: [
         { label: 'Diensten', href: '#diensten' },
+        { label: 'Remote IT', href: '#remote-it' },
         { label: 'Over', href: '#over' },
         { label: 'Referenties', href: '#referenties' },
         { label: 'Contact', href: '#contact' },
@@ -163,6 +207,7 @@ const t = {
       serviceLinks: [
         { label: 'Web Development', href: '#diensten' },
         { label: 'IT Support & Advies', href: '#diensten' },
+        { label: 'Remote IT pakketten', href: '#remote-it' },
         { label: 'Plan een gesprek', href: '#contact' },
       ],
       linkedinLabel: 'LinkedIn profiel',
@@ -177,6 +222,7 @@ const t = {
   en: {
     nav: {
       diensten: 'Services',
+      remoteIt: 'Remote IT',
       over: 'About',
       referenties: 'Clients',
       contact: 'Contact',
@@ -216,6 +262,48 @@ const t = {
       itDesc: 'Practical IT support for entrepreneurs. From network and email to structural management and technical advice.',
       itTags: ['Network & email', 'Remote management', 'Technical advice'],
     },
+    remoteIt: {
+      label: 'REMOTE IT SUPPORT',
+      heading1: 'IT help from a distance,',
+      heading2: 'without the hassle.',
+      sub: 'An outage, a question or ongoing management: I solve it remotely. Pick a package as a starting point, always tailored to you.',
+      from: 'from',
+      cta: 'Request',
+      note: 'All prices exclude VAT. A tailored quote follows after an introduction. See also the',
+      termsLink: 'terms and conditions',
+      packages: {
+        basis: {
+          name: 'Basic',
+          tagline: 'Help when you need it.',
+          features: [
+            'Remote help with issues and questions',
+            'Advice on email, network and security',
+            'Response within [[RESPONSE TIME BASIC]]',
+            'On demand, no fixed commitment',
+          ],
+        },
+        beheer: {
+          name: 'Management',
+          tagline: 'Ongoing management, so you can focus on your business.',
+          features: [
+            'Continuous management of network, email and security',
+            'Microsoft 365 and user management',
+            'Updates and maintenance remotely',
+            'Response within [[RESPONSE TIME MANAGEMENT]]',
+          ],
+        },
+        opmaat: {
+          name: 'Custom',
+          tagline: 'A project or combination that fits your business.',
+          features: [
+            'Tailored to your systems and needs',
+            'Setup or migration, for example Microsoft 365 or VPN',
+            'Can be combined with web development',
+            'No-obligation quote after an introduction',
+          ],
+        },
+      },
+    },
     marquee: [
       'Web Development',
       'IT Support',
@@ -231,7 +319,7 @@ const t = {
       heading1: 'Developer.',
       heading2: 'And IT specialist.',
       bio1: "I'm Nick Zomer, developer and IT specialist from Wassenaar. I started Zomer Development in September 2025 with one goal: helping entrepreneurs who take technology seriously, without needing to contact multiple people.",
-      bio2: "Whether it's building a website, setting up a network, or handling email and security — I take care of it all. No templates, no standard packages. Everything custom, with direct communication.",
+      bio2: "Whether it's building a website, setting up a network, or handling email and security — I take care of it all. No templates. Packages as a starting point, always tailored to you. Short lines and direct communication.",
       skillsLabel: 'What I work with',
       skillWeb: 'Web Development',
       skillIt: 'IT & Infrastructure',
@@ -329,6 +417,7 @@ const t = {
       contactLabel: 'Contact',
       navLinks: [
         { label: 'Services', href: '#diensten' },
+        { label: 'Remote IT', href: '#remote-it' },
         { label: 'About', href: '#over' },
         { label: 'Clients', href: '#referenties' },
         { label: 'Contact', href: '#contact' },
@@ -336,6 +425,7 @@ const t = {
       serviceLinks: [
         { label: 'Web Development', href: '#diensten' },
         { label: 'IT Support & Advice', href: '#diensten' },
+        { label: 'Remote IT packages', href: '#remote-it' },
         { label: 'Schedule a call', href: '#contact' },
       ],
       linkedinLabel: 'LinkedIn profile',
