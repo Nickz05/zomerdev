@@ -39,10 +39,10 @@ export default function Contact() {
     setErrors({})
     setStatus('sending')
     try {
-      const res = await fetch('https://formspree.io/f/xblyvlko', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(data)),
       })
       setStatus(res.ok ? 'sent' : 'error')
     } catch {

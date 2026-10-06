@@ -56,8 +56,8 @@ const privacyNl: LegalDoc = {
       heading: 'Met wie deel ik gegevens (verwerkers)?',
       paragraphs: ['Ik deel gegevens alleen met partijen die ik nodig heb om mijn dienst te leveren:'],
       items: [
-        'Cloudflare, Inc. (Verenigde Staten): hosting, CDN, DNS en beveiliging van deze website. Cloudflare verwerkt technische verkeersgegevens zoals je IP-adres.',
-        'Formspree, Inc. (Verenigde Staten): verwerkt de gegevens die je in het contactformulier invult en stuurt ze door naar mijn mailbox.',
+        'Cloudflare, Inc. (Verenigde Staten): hosting, CDN, DNS en beveiliging van deze website, en de serverfunctie die je contactformulier ontvangt. Cloudflare verwerkt technische verkeersgegevens zoals je IP-adres.',
+        'Resend (Resend, Inc., Verenigde Staten): verstuurt de gegevens die je in het contactformulier invult als e-mail naar mijn mailbox.',
         '[[E-MAILPROVIDER van info@zomerdev.com — invullen of verwijderen]]: ontvangst en opslag van e-mail.',
         'WhatsApp (Meta Platforms Ireland Ltd.): alleen als je zelf via de WhatsApp-knop contact opneemt. Voor het berichtenverkeer gelden de voorwaarden en het privacybeleid van WhatsApp; ik zie je telefoonnummer en wat je stuurt.',
         'Met mijn verwerkers heb ik, waar vereist, een verwerkersovereenkomst of gelden de standaardvoorwaarden van de verwerker. Ik verkoop je gegevens nooit en gebruik ze niet voor reclame.',
@@ -66,7 +66,7 @@ const privacyNl: LegalDoc = {
     {
       heading: 'Doorgifte buiten de EU',
       paragraphs: [
-        'Cloudflare en Formspree zijn gevestigd in de Verenigde Staten. Doorgifte gebeurt op basis van passende waarborgen, zoals het EU-U.S. Data Privacy Framework of standaardcontractbepalingen. [[CONTROLEER per verwerker welke waarborg geldt]]',
+        'Cloudflare en Resend zijn gevestigd in de Verenigde Staten. Doorgifte gebeurt op basis van passende waarborgen, zoals het EU-U.S. Data Privacy Framework of standaardcontractbepalingen. [[CONTROLEER per verwerker welke waarborg geldt]]',
       ],
     },
     {
@@ -138,8 +138,8 @@ const privacyEn: LegalDoc = {
       heading: 'Who do I share data with (processors)?',
       paragraphs: ['I only share data with parties I need to deliver my service:'],
       items: [
-        'Cloudflare, Inc. (United States): hosting, CDN, DNS and security of this website. Cloudflare processes technical traffic data such as your IP address.',
-        'Formspree, Inc. (United States): processes the data you enter in the contact form and forwards it to my mailbox.',
+        'Cloudflare, Inc. (United States): hosting, CDN, DNS and security of this website, and the server function that receives your contact form. Cloudflare processes technical traffic data such as your IP address.',
+        'Resend (Resend, Inc., United States): sends the data you enter in the contact form as an email to my mailbox.',
         '[[EMAIL PROVIDER for info@zomerdev.com — fill in or remove]]: receiving and storing email.',
         'WhatsApp (Meta Platforms Ireland Ltd.): only if you contact me through the WhatsApp button. Messaging is governed by WhatsApp’s terms and privacy policy; I see your phone number and what you send.',
         'Where required I have a data processing agreement with my processors, or the processor’s standard terms apply. I never sell your data and do not use it for advertising.',
@@ -148,7 +148,7 @@ const privacyEn: LegalDoc = {
     {
       heading: 'Transfers outside the EU',
       paragraphs: [
-        'Cloudflare and Formspree are based in the United States. Transfers rely on appropriate safeguards, such as the EU-U.S. Data Privacy Framework or standard contractual clauses. [[CHECK which safeguard applies per processor]]',
+        'Cloudflare and Resend are based in the United States. Transfers rely on appropriate safeguards, such as the EU-U.S. Data Privacy Framework or standard contractual clauses. [[CHECK which safeguard applies per processor]]',
       ],
     },
     {

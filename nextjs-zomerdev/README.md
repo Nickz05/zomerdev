@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# zomerdev.com (Next.js)
 
-## Getting Started
+Statische Next.js 15-export (`output: 'export'`) voor Cloudflare Pages, met een Pages Function
+voor het contactformulier.
 
-First, run the development server:
+## Scripts
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Commando | Wat |
+|---|---|
+| `npm run dev` | Ontwikkelserver (het formulier werkt hier niet: `/api/contact` bestaat alleen als Pages Function) |
+| `npm run build` | Bouwt de statische site naar `out/` |
+| `npm run preview:cf` | Build + `wrangler pages dev out`: site én `/api/contact` lokaal (vereist `.dev.vars`) |
+| `npm run check:placeholders` | Faalt zolang er nog `[[placeholders]]` in `src/i18n` of `src/config` staan |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cloudflare Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Root directory: `nextjs-zomerdev`
+- Build command: `npm run build`
+- Output directory: `out`
+- Node: 20 of hoger
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contactformulier via Resend
 
-## Learn More
+`functions/api/contact.ts` ontvangt het formulier en mailt het via Resend.
 
-To learn more about Next.js, take a look at the following resources:
+1. Verifieer het domein `zomerdev.com` in Resend (DNS-records: SPF/DKIM).
+2. Zet in Cloudflare Pages → Settings → Variables and Secrets:
+   - `RESEND_API_KEY` (secret)
+   - `CONTACT_FROM`, bijv. `Zomer Development <contact@zomerdev.com>` (domein moet geverifieerd zijn)
+   - `CONTACT_TO`, standaard `info@zomerdev.com`
+3. Lokaal testen: kopieer `.dev.vars.example` naar `.dev.vars`, vul de key in, draai `npm run preview:cf`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Beveiliging: same-origin check, honeypot (`_gotcha`), validatie en lengtelimieten op de server,
+HTML-escaping in de mail. Overweeg daarnaast een Cloudflare rate-limiting rule op `/api/contact`.
