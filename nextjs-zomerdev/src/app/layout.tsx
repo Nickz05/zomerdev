@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.zomerdev.com'),
   title,
   description:
-    'Nick Zomer — freelance web developer en IT specialist uit Wassenaar. React, TypeScript, Sanity CMS. Websites op maat én IT support & beheer. Eén aanspreekpunt, korte lijnen.',
+    'Nick Zomer — freelance web developer en IT specialist uit Wassenaar. React, TypeScript, Sanity CMS. Websites en webapps op maat én remote IT support. Eén aanspreekpunt, korte lijnen.',
   keywords:
     'freelance web developer Wassenaar, IT specialist Den Haag, React developer Nederland, website laten maken, IT support kleine bedrijven, TypeScript, Sanity CMS, Cloudflare, Nick Zomer',
   authors: [{ name: 'Nick Zomer — Zomer Development' }],

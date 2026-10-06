@@ -114,6 +114,7 @@ export default function RemoteIT() {
 
                   <a
                     href="#contact"
+                    onClick={() => window.dispatchEvent(new CustomEvent('contact:subject', { detail: 'it' }))}
                     className={`group mt-8 inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-5 py-3 text-[14px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
                       featured
                         ? 'bg-gold text-[#0F2338] hover:bg-[#fdd07a] focus-visible:ring-gold focus-visible:ring-offset-navy'

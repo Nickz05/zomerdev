@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Diensten from '@/components/Diensten'
 import Marquee from '@/components/Marquee'
 import RemoteIT from '@/components/RemoteIT'
+import WebOnRequest from '@/components/WebOnRequest'
 import Werkwijze from '@/components/Werkwijze'
 import Over from '@/components/Over'
 import Referenties from '@/components/Referenties'
@@ -23,6 +24,7 @@ export default function Home() {
         <Diensten />
         <Marquee />
         <RemoteIT />
+        <WebOnRequest />
         <Werkwijze />
         <Over />
         <Referenties />

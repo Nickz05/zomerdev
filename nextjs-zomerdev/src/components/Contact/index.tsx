@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IconMail, IconMapPin, IconBuilding, IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconBrandWhatsapp, IconCheck, IconArrowRight } from '@tabler/icons-react'
 import Link from 'next/link'
 import { WHATSAPP_URL } from '../../config/contact'
@@ -16,6 +16,16 @@ export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [subject, setSubject] = useState('gesprek')
+
+  // Knoppen elders op de pagina kiezen alvast het juiste onderwerp
+  useEffect(() => {
+    const onSubject = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail
+      if (t.contact.subjects.some((s) => s.id === id)) setSubject(id)
+    }
+    window.addEventListener('contact:subject', onSubject)
+    return () => window.removeEventListener('contact:subject', onSubject)
+  }, [t])
 
   const anim = (delay: number) => ({
     style: {

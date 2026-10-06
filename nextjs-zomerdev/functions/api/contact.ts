@@ -16,7 +16,7 @@ interface Env {
 }
 
 const SUBJECTS: Record<string, string> = {
-  website: 'Website bouwen',
+  website: 'Website of webapp',
   it: 'IT Support',
   gesprek: 'Vrijblijvend gesprek',
   anders: 'Anders',
