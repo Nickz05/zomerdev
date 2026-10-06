@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { IconMail, IconMapPin, IconBuilding, IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconCheck, IconArrowRight } from '@tabler/icons-react'
+import { IconMail, IconMapPin, IconBuilding, IconBrandLinkedin, IconBrandInstagram, IconBrandTiktok, IconBrandWhatsapp, IconCheck, IconArrowRight } from '@tabler/icons-react'
 import Link from 'next/link'
+import { WHATSAPP_URL } from '../../config/contact'
 import { useInView } from '../../hooks/useInView'
 import SectionLabel from '../SectionLabel'
 import profilePicImg from '@/assets/images/profile-pic.webp'
@@ -143,6 +144,23 @@ export default function Contact() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div {...anim(205)}>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 rounded-[var(--radius-sm)] border border-white/20 bg-white/[0.06] hover:bg-white/10 hover:border-white/30 px-4 py-3 text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+            >
+              <IconBrandWhatsapp size={20} stroke={1.6} className="text-[#25D366] flex-shrink-0" aria-hidden />
+              <span className="flex flex-col leading-tight">
+                <span className="text-[14px] font-semibold">{t.contact.whatsapp}</span>
+                <span className="text-[12px] text-white/70">{t.contact.whatsappSub}</span>
+              </span>
+              <IconArrowRight size={14} className="ml-1 transition-transform duration-150 group-hover:translate-x-0.5" aria-hidden />
+              <span className="sr-only">{t.contact.newTab}</span>
+            </a>
           </div>
 
           <div {...anim(230)}>
