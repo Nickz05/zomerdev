@@ -1,11 +1,12 @@
 'use client'
 
-import { IconMessages, IconFileDescription, IconTools, IconHeartHandshake } from '@tabler/icons-react'
+import type { CSSProperties } from 'react'
 import { useInView } from '../../hooks/useInView'
 import { useLanguage } from '../../contexts/LanguageContext'
 import SectionLabel from '../SectionLabel'
 
-const ICONS = [IconMessages, IconFileDescription, IconTools, IconHeartHandshake]
+// Elke trede is hoger dan de vorige; op mobiel worden ze gewoon onder elkaar gestapeld.
+const HEIGHTS = ['280px', '330px', '380px', '430px']
 
 export default function Werkwijze() {
   const { t } = useLanguage()
@@ -16,7 +17,7 @@ export default function Werkwijze() {
       opacity: inView ? 1 : 0,
       transform: inView ? 'none' : 'translateY(20px)',
       transition: `opacity 600ms cubic-bezier(0.22,1,0.36,1) ${delay}ms, transform 600ms cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
-    }) as React.CSSProperties
+    }) as CSSProperties
 
   return (
     <section
@@ -39,31 +40,21 @@ export default function Werkwijze() {
           </h2>
         </div>
 
-        <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {t.werkwijze.steps.map((step, i) => {
-            const Icon = ICONS[i]
-            return (
-              <li
-                key={step.title}
-                style={anim(100 + i * 90)}
-                className="relative rounded-[var(--radius)] border border-[var(--line)] bg-[var(--paper)] p-7"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[12px] tracking-[0.14em] text-[var(--text-muted)]">
-                    <span className="sr-only">{t.werkwijze.stepLabel} </span>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className="w-10 h-10 rounded-[10px] bg-[var(--gold-soft)] flex items-center justify-center">
-                    <Icon size={20} stroke={1.5} aria-hidden className="text-[var(--gold-text)]" />
-                  </span>
-                </div>
-                <h3 className="mt-6 font-display text-[22px] font-bold text-navy tracking-[-0.02em] leading-tight">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-[14px] leading-[1.7] text-[var(--text-muted)]">{step.text}</p>
-              </li>
-            )
-          })}
+        <ol className="flex flex-col gap-5 lg:flex-row lg:items-end lg:gap-0">
+          {t.werkwijze.steps.map((step, i) => (
+            <li
+              key={step.title}
+              style={{ ...anim(100 + i * 90), '--h': HEIGHTS[i], zIndex: i + 1 } as CSSProperties}
+              className="relative lg:flex-1 lg:min-h-[var(--h)] lg:-ml-5 lg:first:ml-0 flex flex-col justify-end rounded-[var(--radius)] border border-[var(--line)] border-t-4 border-t-gold bg-[var(--paper)] p-6 lg:pl-10 lg:first:pl-6 shadow-[0_8px_30px_rgba(15,35,56,0.10)] lg:shadow-[-10px_0_28px_rgba(15,35,56,0.12)]"
+            >
+              <span className="font-display text-[44px] leading-none font-bold text-gold tracking-[-0.04em]">
+                <span className="sr-only">{t.werkwijze.stepLabel} </span>
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 className="mt-3 font-display text-[22px] font-bold text-navy tracking-[-0.02em]">{step.title}</h3>
+              <p className="mt-2 text-[14px] leading-[1.7] text-[var(--text-muted)]">{step.text}</p>
+            </li>
+          ))}
         </ol>
       </div>
     </section>
