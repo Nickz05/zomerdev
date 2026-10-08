@@ -115,6 +115,12 @@ export default function Footer() {
             {t.footer.copyright}
           </p>
           <nav aria-label={t.footer.legalLabel} className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link href="/about/" className="text-white/60 hover:text-white transition-colors text-[12px]">
+              {t.footer.aboutPage}
+            </Link>
+            <Link href="/contact/" className="text-white/60 hover:text-white transition-colors text-[12px]">
+              {t.footer.contactPage}
+            </Link>
             <Link href="/privacy/" className="text-white/60 hover:text-white transition-colors text-[12px]">
               {t.footer.privacy}
             </Link>
