@@ -43,3 +43,7 @@ next-env.d.ts
 # cloudflare / wrangler
 .dev.vars
 .wrangler/
+.build-check/
+# gegenereerd voor AI-agents (npm run generate:agent)
+public/md/
+public/llms.txt
