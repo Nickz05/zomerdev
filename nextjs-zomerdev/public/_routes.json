@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": ["/_next/*", "/md/*", "/favicon.png", "/favicon.ico", "/apple-touch-icon.png", "/og-image.png", "/robots.txt", "/sitemap.xml", "/llms.txt"]
+}

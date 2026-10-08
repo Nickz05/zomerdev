@@ -27,7 +27,7 @@ const url = (path) => BASE + path
 const bullets = (items) => items.map((i) => `- ${i}`).join('\n')
 const priceLine = (l, id) => {
   const p = PACKAGE_PRICES[id]
-  return p ? `${t[l].remoteIt.from} € ${p.amount} ${p.unit}` : t[l].remoteIt.onRequest
+  return p ? `${t[l].remoteIt.from} € ${p.amount} ${p.unit[l]}` : t[l].remoteIt.onRequest
 }
 
 const footerNote = (l, key) =>
