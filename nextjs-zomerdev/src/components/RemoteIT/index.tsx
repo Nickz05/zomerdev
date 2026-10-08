@@ -13,7 +13,7 @@ const ORDER: PackageId[] = ['basis', 'opmaat']
 const pick = (subject: string) => () => window.dispatchEvent(new CustomEvent('contact:subject', { detail: subject }))
 
 export default function RemoteIT() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const { ref, inView } = useInView(0.1)
 
   const anim = (delay: number) =>
@@ -58,7 +58,7 @@ export default function RemoteIT() {
                       <>
                         <span className="text-[12px] font-mono uppercase tracking-[0.12em] text-white/75">{t.remoteIt.from}</span>
                         <span className="font-display text-[32px] font-bold tracking-[-0.03em] leading-none text-gold">€ {price.amount}</span>
-                        <span className="text-[13px] text-white/75">{price.unit}</span>
+                        <span className="text-[13px] text-white/75">{price.unit[lang]}</span>
                       </>
                     ) : (
                       <span className="font-display text-[32px] font-bold tracking-[-0.03em] leading-none text-gold">{t.remoteIt.onRequest}</span>

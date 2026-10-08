@@ -8,10 +8,10 @@ export type PackageId = 'basis' | 'opmaat'
 
 export interface PackagePrice {
   amount: string
-  unit: string
+  unit: { nl: string; en: string }
 }
 
 export const PACKAGE_PRICES: Record<PackageId, PackagePrice | null> = {
-  basis: { amount: '50', unit: 'per uur' },
+  basis: { amount: '50', unit: { nl: 'per uur', en: 'per hour' } },
   opmaat: null,
 }
