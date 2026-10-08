@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate:agent && next build",
     "start": "npx serve out",
     "lint": "eslint",
     "check:placeholders": "node scripts/check-placeholders.mjs",
-    "preview:cf": "next build && npx wrangler pages dev out --compatibility-date=2026-06-01"
+    "preview:cf": "next build && npx wrangler pages dev out --compatibility-date=2026-06-01",
+    "generate:agent": "node --experimental-strip-types --no-warnings scripts/build-agent-files.mjs",
+    "test": "node --experimental-strip-types --no-warnings --test \"tests/*.test.ts\""
   },
   "dependencies": {
     "@tabler/icons-react": "^3.44.0",
