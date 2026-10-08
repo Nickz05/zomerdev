@@ -44,11 +44,42 @@
             "itemOffered": {
               "@type": "Service",
               "name": "IT Support & Advies",
-              "description": "Netwerk, e-mail, beveiliging en beheer op afstand voor ondernemers."
+              "description": "Netwerk, e-mail, beveiliging en beheer op afstand voor ondernemers. Vanaf € 50 per uur excl. btw, reactie binnen 4 uur op werkdagen."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": 50,
+              "priceCurrency": "EUR",
+              "unitCode": "HUR",
+              "valueAddedTaxIncluded": false
             }
           }
         ]
-      }
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "info@zomerdev.com",
+          "url": "https://www.zomerdev.com/contact/",
+          "availableLanguage": [
+            "Dutch",
+            "English"
+          ],
+          "areaServed": "NL"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@zomerdev.com",
+          "url": "https://www.zomerdev.com/contact/",
+          "availableLanguage": [
+            "Dutch",
+            "English"
+          ],
+          "areaServed": "NL"
+        }
+      ]
     },
     {
       "@type": "Person",
